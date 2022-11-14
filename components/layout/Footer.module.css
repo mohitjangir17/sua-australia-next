@@ -1,0 +1,122 @@
+.Footer {
+  padding: 1em;
+  margin-top: -4em;
+  background-color: #b78456;
+}
+
+.footerColumns {
+  margin: 0.5em 0em;
+}
+
+.footerLogo {
+  height: 80px;
+  width: 100px;
+  margin: 0 -1.5em;
+}
+
+.exploreLinks,
+.linksCol,
+.questionsCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.exploreLinks>a {
+  margin-top: 0.5em;
+  text-decoration: none;
+  color: black;
+  transition: 0.7s;
+}
+
+.exploreLinks>a:hover {
+  color: white;
+  transition: 0.7s;
+  scale: 1.03;
+}
+
+.linksCol>a {
+  margin-top: 0.5em;
+  text-decoration: none;
+  color: black;
+  transition: 0.7s;
+}
+
+.linksCol>a:hover {
+  color: white;
+  transition: 0.7s;
+  scale: 1.03;
+}
+
+.questionsCol>a {
+  margin-top: 0.5em;
+  text-decoration: none;
+  color: black;
+  transition: 0.7s;
+}
+
+.questionsCol>a:hover {
+  color: white;
+  transition: 0.7s;
+  scale: 1.03;
+}
+
+.exploreLinks>a:focus,
+.linksCol>a:focus,
+.questionsCol>a:focus {
+  outline: none;
+  color: white;
+  transition: 0.7s;
+  scale: 1.03;
+}
+
+.socialIconnFooter {
+  transition: 0.4s;
+  font-size: xx-large;
+  color: black;
+  margin: 0.4em;
+}
+
+.socialIconnFooter:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  transform: scale(1.2);
+}
+
+@media only screen and (min-width: 600px) {
+  .Footer {
+    padding: 2em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Footer {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .Footer {
+    padding: 2em 5em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .footer-social-icons>a>img {
+    transition: 0.4s;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .Footer {
+    padding: 2em 10em;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .footerColumns {
+    margin: 0.5em;
+  }
+}

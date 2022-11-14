@@ -1,0 +1,253 @@
+.socialLogos {
+  display: none;
+}
+
+.socialLogos > a {
+  margin: 0.2em 0;
+}
+
+.socialIconn {
+  transition: 0.4s;
+}
+
+.socialIconn:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  transform: scale(1.2);
+}
+
+.poster {
+  display: flex;
+  padding: 1em 1.2em;
+}
+
+.poster > a {
+  background-color: aliceblue;
+  margin-top: -1.1em;
+}
+
+.poster > a > img {
+  width: 75px;
+  height: 60px;
+}
+.Navbar {
+  background-color: rgb(240, 255, 255, 0.5);
+  margin: 1em;
+  border-radius: 10px;
+}
+
+.Navbar > nav > a {
+  margin: 1em 2em;
+}
+
+.Navbar {
+  padding: 1em;
+  background-color: rgb(240, 255, 255, 0.5);
+}
+
+.desktopNavbar {
+  display: none;
+}
+
+.mobileNavbar p {
+  color: white;
+  font-size: large;
+  margin-left: 1em;
+  width: fitContent;
+  transition: 0.7s;
+}
+
+.mobileNavbar p:hover {
+  cursor: pointer;
+  color: #b78456;
+  transition: 0.7s;
+  transform: scale(1.1);
+}
+
+.mobileNavbar > span {
+  display: block;
+  position: relative;
+  animation: navSlider 0.7s forwards;
+}
+
+.navlist > a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+  margin: 1.5em 2em;
+  transition: 0.7s;
+  width: maxContent;
+}
+
+.navlist > a:hover {
+  transition: 0.7s;
+  color: #b78456;
+}
+
+.navlist > a:focus {
+  transition: 0.7s;
+  color: #b78456;
+  outline: none;
+}
+
+.Navbar > nav > a:focus {
+  transition: 0.7s;
+  color: #b78456;
+  outline: none;
+}
+
+.Navbar > nav > a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+  margin: 2em;
+  text-decoration: none;
+  color: white;
+  transition: 0.7s;
+  font-size: large;
+}
+
+.Navbar > nav > a:hover {
+  transition: 0.7s;
+  color: #b78456;
+}
+
+@-moz-keyframes navSlider {
+  0% {
+    bottom: 50px;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes navSlider {
+  0% {
+    bottom: 50px;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes navSlider {
+  0% {
+    bottom: 50px;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .Navbar {
+    padding: 1em;
+    background-color: rgb(240, 255, 255, 0.5);
+    font-size: large;
+  }
+
+  .desktopNavbar {
+    display: none;
+  }
+
+  .mobileNavbar {
+    display: block;
+  }
+
+  .navlist > a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    margin: 2em;
+  }
+
+  .mobileNavbar > nav > a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    margin: 2em;
+  }
+
+  .Navbar > nav > a {
+    text-decoration: none;
+    color: white;
+  }
+
+  @-webkit-keyframes navSlider {
+    0% {
+      bottom: 50px;
+      opacity: 0;
+    }
+
+    100% {
+      bottom: 0px;
+      opacity: 1;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .desktopNavbar {
+    display: flex;
+  }
+
+  .mobileNavbar {
+    display: none;
+  }
+
+  .Navbar > nav > a {
+    margin: 1em 2em;
+  }
+  .poster > a > img {
+    width: 95px;
+    height: 80px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .Navbar {
+    background-color: rgb(240, 255, 255, 0.5);
+    margin: 1em 4em;
+  }
+  .sociaLogos {
+    display: block;
+  }
+
+  .socialIconn {
+    font-size: xxx-large;
+    color: white;
+    transition: 0.4s;
+    margin: 0em 0.4em;
+  }
+
+  .poster {
+    display: flex;
+    justifycontent: space-between;
+    padding: 1em 4.8em;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .Navbar {
+    background-color: rgb(240, 255, 255, 0.5);
+    margin: 1em 5em;
+  }
+  .poster {
+    display: flex;
+    justifycontent: space-between;
+    padding: 1em 5.8em;
+  }
+}

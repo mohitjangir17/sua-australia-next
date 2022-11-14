@@ -1,0 +1,132 @@
+.Blogs {
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 6em;
+
+}
+
+.Blogs h2 {
+  font-size: xx-large;
+}
+
+.spanBlogs {
+  font-weight: 700;
+  font-size: x-large;
+  color: #b78456;
+  margin: 1em 0;
+  display: block;
+  text-align: center;
+}
+
+.blogsList {
+  background-color: rgb(246, 246, 246);
+  border-radius: 5px;
+  margin: 1em;
+  transition: 0.4s;
+}
+
+.blogsList:hover {
+  cursor: pointer;
+  transform: scale(1.009);
+  transition: 0.4s;
+  box-shadow: grey 2px 2px 20px;
+}
+
+.blogThumbnailBG {
+  height: 250px;
+  background-position: 50%;
+  background-size: cover;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.blogsList h3 {
+  margin: 1em;
+  text-align: left;
+  transition: 0.4s;
+}
+
+.blogsList h3:hover {
+  color: #b78456;
+  transition: 0.4s;
+}
+
+.Link {
+  text-decoration: none;
+  color: black;
+}
+
+.Link:hover {
+  text-decoration: none;
+}
+
+.blogsList p {
+  margin: 1em;
+  text-align: left;
+}
+
+.blogInfo {
+  display: flex;
+  text-align: left;
+  font-weight: 700;
+  padding-bottom: 2em;
+}
+
+.AllBlogs>.blogsContainer {
+  margin: 4em 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .blogsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Blogs h2 {
+    font-size: xxx-large;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .blogsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0.5em;
+  }
+
+  .blogsList {
+    background-color: rgb(246, 246, 246);
+    border-radius: 5px;
+    margin: 1em;
+    transition: 0.4s;
+    width: auto;
+  }
+
+  .AllBlogs>.blogsContainer {
+    margin: 4em 2em;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .blogsContainer {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1em;
+  }
+
+  .AllBlogs>.blogsContainer {
+    margin: 8em 6em;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .blogsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0em;
+  }
+
+  .AllBlogs>.blogsContainer {
+    margin: 8em 10em;
+  }
+}
