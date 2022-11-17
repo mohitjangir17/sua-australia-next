@@ -38,7 +38,7 @@ function Navbar() {
           <ToggleDisplay show={show}>
             <div className={styles.navlist}>
               <Link href="/">Home</Link>
-              <Link href="/upload">Upload</Link>
+              <Link href="/assignment-query">Assignment Query</Link>
               <Link href="/contact">Contact</Link>
               <Link href="/blogs">Blogs</Link>
             </div>
@@ -46,7 +46,7 @@ function Navbar() {
         </nav>
         <nav className={styles.desktopNavbar}>
           <Link href="/">Home</Link>
-          <Link href="/upload">Upload</Link>
+          <Link href="/assignment-query">Assignment Query</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/blogs">Blogs</Link>
         </nav>

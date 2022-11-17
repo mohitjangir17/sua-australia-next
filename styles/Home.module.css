@@ -12,6 +12,10 @@
   width: 100vw;
 }
 
+.mainContainer {
+  margin: 5em 0em;
+}
+
 .whiteBg {
   background-color: white;
   z-index: -2;
@@ -485,6 +489,27 @@ section.courseItemContainer:focus {
   margin: -0.5em 1em;
 }
 
+/* ---------Blogs--------------- */
+.Blogs {
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 6em;
+
+}
+
+.Blogs h2 {
+  font-size: xx-large;
+}
+
+.spanBlogs {
+  font-weight: 700;
+  font-size: x-large;
+  color: #b78456;
+  margin: 1em 0;
+  display: block;
+  text-align: center;
+}
+
 @media only screen and (min-width: 600px) {
   .Herotext>button {
     width: 95vw;
@@ -581,6 +606,8 @@ section.courseItemContainer:focus {
     margin: 4em 1em;
   }
 
+
+
   .Herotext>h1 {
     font-weight: 800;
 
@@ -667,6 +694,11 @@ section.courseItemContainer:focus {
 @media only screen and (min-width: 960px) {
   .whiteBackground {
     margin: 4em;
+  }
+
+  .mainContainer {
+    margin: 8em 10em;
+
   }
 
   .Herotext {

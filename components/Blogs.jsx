@@ -30,42 +30,38 @@ function Blogs() {
   ]);
 
   return (
-    <div className={styles.Blogs}>
-      <span className={styles.spanBlogs}>Blogs</span>
-      <h2>Our Latest Blogs</h2>
-      <div className={styles.blogsContainer}>
-        {getBlogs.map((blog) => (
-          <a
-            key={blog.id}
-            href={{
-              pathname: `/blogs/${blog.id}`,
-              state: { blogs: blog },
-            }}
-          >
-            <div className={styles.blogsList}>
-              <div
-                className={styles.blogThumbnailBG}
-                style={{
-                  backgroundImage: `url(${blog.thumbnail})`,
-                }}
-              ></div>
-              {/* <img src={blog.thumbnail} alt="blogImg" /> */}
-              <h3>{blog.title}</h3>
-              <p> {blog.summary} </p>
-              {/* <p>
+    <div className={styles.blogsContainer}>
+      {getBlogs.map((blog) => (
+        <a
+          key={blog.id}
+          href={{
+            pathname: `/blogs/${blog.id}`,
+            state: { blogs: blog },
+          }}
+        >
+          <div className={styles.blogsList}>
+            <div
+              className={styles.blogThumbnailBG}
+              style={{
+                backgroundImage: `url(${blog.thumbnail})`,
+              }}
+            ></div>
+            {/* <img src={blog.thumbnail} alt="blogImg" /> */}
+            <h3>{blog.title}</h3>
+            <p> {blog.summary} </p>
+            {/* <p>
                 {" "}
                 {blog.summary.length > 70
                   ? `${blog.summary.substring(0, 70)}...`
                   : blog.summary}
               </p> */}
 
-              <div className={styles.blogInfo}>
-                <p>{new Date(blog.createdAt).toDateString()}</p>
-              </div>
+            <div className={styles.blogInfo}>
+              <p>{new Date(blog.createdAt).toDateString()}</p>
             </div>
-          </a>
-        ))}
-      </div>
+          </div>
+        </a>
+      ))}
     </div>
   );
 }
