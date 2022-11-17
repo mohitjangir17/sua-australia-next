@@ -2,14 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Blogs from "../components/Blogs";
 import CountUp from "react-countup";
 import HeaderText from "../components/HeaderText";
-import { FC } from "react";
+import FadeInWhenVisible from "../components/Fiwv";
 
 import bookicon from "../public/resources/book-logo.png";
 import itemsDelivered from "../public/resources/delivered.png";
@@ -29,27 +28,6 @@ import feature4 from "../public/resources/support-4.png";
 import feature5 from "../public/resources/support-5.png";
 import feature6 from "../public/resources/support-6.png";
 import Navbar from "../components/layout/Navbar";
-
-function FadeInWhenVisible({ children }) {
-  return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{
-        duration: 1,
-        delay: 0.3,
-        ease: [0, 0.5, 0.7, 1.01],
-      }}
-      variants={{
-        visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 50 },
-      }}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
 const responsive = {
   superLargeDesktop: {
@@ -444,97 +422,102 @@ export default function Home() {
           </div>
 
           {/* ----------------------Our Support----------------------------------------- */}
-          <div className={styles.OurSupport}>
-            <span className={styles.spanOurSupport}>Our Support</span>
-            <h2>Step by Step Guide </h2>
-            <article className={styles.supportArticle}>
-              <section>
-                <div className={styles.supportList}>
-                  {" "}
-                  <span> Upload Asssignment </span>
-                </div>
-                <div className={styles.supportList}>
-                  <span> Pay for Assignment </span>
-                </div>
-                <div className={styles.supportList}>
-                  <span> Track Progress</span>
-                </div>
-                <div className={styles.supportList}>
-                  <span> Delivery </span>
-                </div>
-                <div className={styles.supportList}>
-                  <span> Feedback </span>
-                </div>
-              </section>
-            </article>
-          </div>
+          <FadeInWhenVisible>
+            <div className={styles.OurSupport}>
+              <span className={styles.spanOurSupport}>Our Support</span>
+              <h2>Step by Step Guide </h2>
+              <article className={styles.supportArticle}>
+                <section>
+                  <div className={styles.supportList}>
+                    {" "}
+                    <span> Upload Asssignment </span>
+                  </div>
+                  <div className={styles.supportList}>
+                    <span> Pay for Assignment </span>
+                  </div>
+                  <div className={styles.supportList}>
+                    <span> Track Progress</span>
+                  </div>
+                  <div className={styles.supportList}>
+                    <span> Delivery </span>
+                  </div>
+                  <div className={styles.supportList}>
+                    <span> Feedback </span>
+                  </div>
+                </section>
+              </article>
+            </div>
+          </FadeInWhenVisible>
 
           {/* ------------------------OurFeatures--------------------------- */}
-          <div className={styles.OurFeatures}>
-            <span className={styles.spanOurFeatures}>Features</span>
-            <h2>Features that we give</h2>
-            <section className={styles.FeaturesContainer}>
-              <div className={styles.FeatureList}>
-                <Image src={feature1} alt="" />
-                <div>
-                  <h3>Plagarism Free</h3>
-                  <p>
-                    A 100% original solution to reduce the risk of negative
-                    marking.
-                  </p>
+          <FadeInWhenVisible>
+            <div className={styles.OurFeatures}>
+              <span className={styles.spanOurFeatures}>Features</span>
+              <h2>Features that we give</h2>
+              <section className={styles.FeaturesContainer}>
+                <div className={styles.FeatureList}>
+                  <Image src={feature1} alt="" />
+                  <div>
+                    <h3>Plagarism Free</h3>
+                    <p>
+                      A 100% original solution to reduce the risk of negative
+                      marking.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.FeatureList}>
-                <Image src={feature2} alt="" />
-                <div>
-                  <h3>24*7 Help</h3>
-                  <p>
-                    Around the clock - If you have any problems with your
-                    assignments, We are always here to help.
-                  </p>
+                <div className={styles.FeatureList}>
+                  <Image src={feature2} alt="" />
+                  <div>
+                    <h3>24*7 Help</h3>
+                    <p>
+                      Around the clock - If you have any problems with your
+                      assignments, We are always here to help.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.FeatureList}>
-                <Image src={feature3} alt="" />
-                <div>
-                  <h3>On Time Delivery</h3>
-                  <p>
-                    Submit before the deadline, no matter how tough the task is.
-                  </p>
+                <div className={styles.FeatureList}>
+                  <Image src={feature3} alt="" />
+                  <div>
+                    <h3>On Time Delivery</h3>
+                    <p>
+                      Submit before the deadline, no matter how tough the task
+                      is.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.FeatureList}>
-                <Image src={feature4} alt="" />
-                <div>
-                  <h3>P.Hd. Expert Writers</h3>
-                  <p>
-                    Get Rewrites of your task an unlimited number of times until
-                    you are satisfied.
-                  </p>
+                <div className={styles.FeatureList}>
+                  <Image src={feature4} alt="" />
+                  <div>
+                    <h3>P.Hd. Expert Writers</h3>
+                    <p>
+                      Get Rewrites of your task an unlimited number of times
+                      until you are satisfied.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.FeatureList}>
-                <Image src={feature5} alt="" />
-                <div>
-                  <h3>Confidential</h3>
-                  <p>
-                    We guarantee the safety of your information from malicious
-                    third parties.
-                  </p>
+                <div className={styles.FeatureList}>
+                  <Image src={feature5} alt="" />
+                  <div>
+                    <h3>Confidential</h3>
+                    <p>
+                      We guarantee the safety of your information from malicious
+                      third parties.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.FeatureList}>
-                <Image src={feature6} alt="" />
-                <div>
-                  <h3>Best Price</h3>
-                  <p>
-                    Get 100% accurate solutions on 250+ topics and improve your
-                    grade point average.
-                  </p>
+                <div className={styles.FeatureList}>
+                  <Image src={feature6} alt="" />
+                  <div>
+                    <h3>Best Price</h3>
+                    <p>
+                      Get 100% accurate solutions on 250+ topics and improve
+                      your grade point average.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </section>
-          </div>
+              </section>
+            </div>
+          </FadeInWhenVisible>
 
           {/* -----------------------Testmonials------------------------------------ */}
           <div className={styles.Testimonials}>
@@ -572,7 +555,13 @@ export default function Home() {
           </div>
 
           {/* -------------------------Blogs Component------------------------------- */}
-          <Blogs />
+          <FadeInWhenVisible>
+            <div className={styles.Blogs}>
+              <span className={styles.spanBlogs}>Blogs</span>
+              <h2>Our Latest Blogs</h2>
+              <Blogs />
+            </div>
+          </FadeInWhenVisible>
         </section>
       </div>
     </div>

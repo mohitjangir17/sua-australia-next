@@ -2,12 +2,11 @@
   "name": "sua-australia-next",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mohitjangir17.github.io/sua-next",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "gh-pages -d build",
+    "gitdeploy": "gh-pages -d build",
     "lint": "next lint"
   },
   "dependencies": {
