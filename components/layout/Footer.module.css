@@ -92,7 +92,8 @@
   .Footer {
     padding: 2em;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 45% 25% 25%;
+    gap: 2em;
   }
 }
 
@@ -100,7 +101,8 @@
   .Footer {
     padding: 2em 5em;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 45% 25% 25%;
+    gap: 2em;
   }
 
   .footer-social-icons>a>img {
@@ -113,7 +115,8 @@
     padding: 2em 10em;
     max-width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 25% 20% 20% 25%;
+    gap: 2em;
   }
 
   .footerColumns {

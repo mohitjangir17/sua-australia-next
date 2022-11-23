@@ -1,15 +1,13 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import Image from "next/image";
 import { useState } from "react";
+import CountUp from "react-countup";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Blogs from "../components/Blogs";
-import CountUp from "react-countup";
-import HeaderText from "../components/HeaderText";
-import FadeInWhenVisible from "../components/Fiwv";
+import styles from "../styles/Home.module.css";
 
+// Resources Import
 import bookicon from "../public/resources/book-logo.png";
 import itemsDelivered from "../public/resources/delivered.png";
 import teamLogo from "../public/resources/teamwork.png";
@@ -27,8 +25,15 @@ import feature3 from "../public/resources/support-3.png";
 import feature4 from "../public/resources/support-4.png";
 import feature5 from "../public/resources/support-5.png";
 import feature6 from "../public/resources/support-6.png";
-import Navbar from "../components/layout/Navbar";
 
+// Components Import
+import Navbar from "../components/layout/Navbar";
+import Blogs from "../components/Blogs";
+import HeaderText from "../components/HeaderText";
+import FadeInWhenVisible from "../components/Fiwv";
+import clientReviewsData from "../clientReviewsData/data";
+
+// Testimonials Slider
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1280 },
@@ -52,6 +57,7 @@ const responsive = {
 };
 
 export default function Home() {
+  // Form State
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
@@ -80,36 +86,6 @@ export default function Home() {
   //   storage.setItem("subject", subject);
   // }, [firstname, lastname, email, subject, storage]);
 
-  const [testimonialsData, setTestimonialsData] = useState([
-    {
-      id: 1,
-      reviewerName: "Roger ",
-      courseName: "Web Development",
-      reviewDescription:
-        "1 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    },
-    {
-      id: 2,
-      reviewerName: "Roger ",
-      courseName: "DBMS",
-      reviewDescription:
-        "2 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    },
-    {
-      id: 3,
-      reviewerName: "Roger ",
-      courseName: "JS",
-      reviewDescription:
-        "3 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    },
-    {
-      id: 4,
-      reviewerName: "Roger ",
-      courseName: "React",
-      reviewDescription:
-        "4 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    },
-  ]);
   return (
     <div className={styles.container}>
       <Head>
@@ -128,12 +104,14 @@ export default function Home() {
       <HeaderText />
       {/* </section> */}
       <div className={styles.whiteBg}>
-        {/* ------------------------------Upload Form--------------------------------- */}
+        {/* ----------------Upload Form------------------------ */}
         <div className={styles.UploadForm}>
           <form
             action="/upload"
             // method="post"
           >
+            <h1 className={styles.goodGrades}>Need Good Grades?</h1>
+            <p className={styles.goodGradesP}>GET SOLUTION NOW!</p>
             <label htmlFor="fistname">Firstname</label> <br />
             <input
               type="text"
@@ -175,7 +153,7 @@ export default function Home() {
           </form>
         </div>
         <section className={styles.whiteBackground}>
-          {/* -----------------------Benifits-------------------------------------------- */}
+          {/* -----------------------Benifits----------------------- */}
           <FadeInWhenVisible>
             <div className={styles.Benifits}>
               <div
@@ -227,7 +205,7 @@ export default function Home() {
             </div>
           </FadeInWhenVisible>
 
-          {/* -------------------------Figures----------------------------- */}
+          {/* -------------------------Figures--------------------- */}
           <div className={styles.Figures}>
             <FadeInWhenVisible>
               {/* <FontAwesomeIcon icon={faCircleCheck} /> */}
@@ -291,7 +269,7 @@ export default function Home() {
             </FadeInWhenVisible>
           </div>
 
-          {/* -----------------------------Courses------------------------------------ */}
+          {/* -----------------------Courses------------------------ */}
           <div className={styles.Courses}>
             <span>Courses</span>
             <h2>Courses that we provide</h2>
@@ -421,7 +399,7 @@ export default function Home() {
             </section>
           </div>
 
-          {/* ----------------------Our Support----------------------------------------- */}
+          {/* -------------------Our Support----------------- */}
           <FadeInWhenVisible>
             <div className={styles.OurSupport}>
               <span className={styles.spanOurSupport}>Our Support</span>
@@ -449,7 +427,7 @@ export default function Home() {
             </div>
           </FadeInWhenVisible>
 
-          {/* ------------------------OurFeatures--------------------------- */}
+          {/* ------------------------OurFeatures---------------- */}
           <FadeInWhenVisible>
             <div className={styles.OurFeatures}>
               <span className={styles.spanOurFeatures}>Features</span>
@@ -519,7 +497,7 @@ export default function Home() {
             </div>
           </FadeInWhenVisible>
 
-          {/* -----------------------Testmonials------------------------------------ */}
+          {/* -----------------------Testmonials---------------------- */}
           <div className={styles.Testimonials}>
             <span className={styles.spanTestimonials}>Testimonials</span>
             <h2>What our clients say?</h2>
@@ -533,20 +511,17 @@ export default function Home() {
                 autoPlay={true}
                 autoPlaySpeed={3000}
               >
-                {testimonialsData.map((testimonial) => (
-                  <div
-                    key={testimonial.id}
-                    className={styles.testimonials_list}
-                  >
+                {clientReviewsData.map((review) => (
+                  <div key={review.id} className={styles.testimonials_list}>
                     <div>
                       {/* <img src={reactlogo} alt="person" /> */}
                       <span>
-                        <h3> {testimonial.reviewerName}</h3>
-                        <p>{testimonial.courseName}</p>
+                        <h3> {review.reviewerName}</h3>
+                        <p>{review.courseName}</p>
                       </span>
                     </div>
                     <p className={styles.reviewDescription}>
-                      {testimonial.reviewDescription}
+                      {review.reviewDescription}
                     </p>
                   </div>
                 ))}
@@ -554,7 +529,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* -------------------------Blogs Component------------------------------- */}
+          {/* ----------------Blogs Component---------------- */}
           <FadeInWhenVisible>
             <div className={styles.Blogs}>
               <span className={styles.spanBlogs}>Blogs</span>

@@ -113,6 +113,20 @@
 }
 
 /* -----------------Upload Form---------------- */
+.goodGrades {
+  color: #b78456;
+  font-size: 3rem;
+  max-width: 400px;
+}
+
+.goodGradesP {
+  color: #b78456;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: -1em;
+}
+
 .UploadForm {
   box-sizing: border-box;
 }
@@ -432,6 +446,7 @@ section.courseItemContainer:focus {
 .FeatureList>div {
   border-left: #b78456 3px solid;
   padding-left: 0.4em;
+  text-align: left;
 }
 
 .FeatureList>img {
@@ -636,10 +651,10 @@ section.courseItemContainer:focus {
   /* -----------------Upload Form---------------- */
   .UploadForm {
     position: absolute;
-    top: 22em;
+    top: 15em;
     right: 1em;
 
-    width: 35vw;
+    width: 45vw;
     padding: 0;
     margin: 0;
     background-color: none;
@@ -709,11 +724,9 @@ section.courseItemContainer:focus {
 
   .Herotext>h1 {
     font-weight: 700;
-
-    /* font-size: 3.7em; */
     line-height: 1.2;
     margin-bottom: 1em;
-    width: 50%;
+    width: 45%;
   }
 
   .Herotext>p {
@@ -723,7 +736,7 @@ section.courseItemContainer:focus {
     display: block;
     letter-spacing: 2px;
     font-family: inherit;
-    width: 50%;
+    width: 45%;
   }
 
   .social-logos {
@@ -745,10 +758,10 @@ section.courseItemContainer:focus {
 
   /* -----------------UploadForm---------------- */
   .UploadForm {
-    top: 22em;
+    top: 15em;
     right: 5em;
 
-    width: 30vw;
+    width: 40vw;
     padding: 0;
     margin: 0;
     background-color: none;
@@ -861,7 +874,7 @@ section.courseItemContainer:focus {
     font-weight: 800;
     color: #fff;
     font-size: 3.7rem;
-    width: 55%;
+    width: 45%;
   }
 
   .Herotext>p {
@@ -869,15 +882,15 @@ section.courseItemContainer:focus {
     color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
     letter-spacing: 2px;
-    width: 55%;
+    width: 45%;
   }
 
   /* ---------------UploadForm------------------------ */
   .UploadForm {
-    top: 22em;
-    right: 11em;
+    top: 15em;
+    right: 6em;
 
-    width: 25vw;
+    width: 35vw;
     padding: 0;
     margin: 0;
     background-color: none;

@@ -21,9 +21,11 @@ function Footer() {
             alt="logo"
           />
         </Link>
+        {/* <h3>About</h3> */}
         <p>
-          A small river named Duden flows by their place <br />
-          and supplies it with the necessary regelialia.
+          SwipeUp utilizes the expertise of its team to offer quality services
+          to its clients. Our key motive is to provide such Help that the
+          student achieves the best in class results.
         </p>
 
         <div className={styles.footerSocialIcons}>
@@ -39,31 +41,25 @@ function Footer() {
         </div>
       </div>
       <div className={styles.footerColumns}>
-        <h3>Explore</h3>
+        <h3>Help Desk</h3>
         <div className={styles.exploreLinks}>
           <Link href="#">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            About Us
+            Assignment Expert
           </Link>
           <Link href="#">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            Services
+            Login
           </Link>
           <Link href="#">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            Cources
-          </Link>
-          <Link href="#">
-            <span>
-              <Image width={25} src={arrow} alt="" />
-            </span>
-            Blogs
+            Sign Up
           </Link>
           <Link href="#">
             <span>
@@ -71,58 +67,76 @@ function Footer() {
             </span>
             Contact Us
           </Link>
+          <Link href="#">
+            <span>
+              <Image width={25} src={arrow} alt="" />
+            </span>
+            Refund Policy
+          </Link>
+          <Link href="#">
+            <span>
+              <Image width={25} src={arrow} alt="" />
+            </span>
+            Privacy Policy
+          </Link>
         </div>
       </div>
       <div className={styles.footerColumns}>
-        <h3>Our Links</h3>
+        <h3>Our Services</h3>
         <div className={styles.linksCol}>
           <Link href="#">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            Contact Us
+            Assignment Help
           </Link>
           <Link href="#">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            Pricing
+            Exam Help
           </Link>
           <Link href="#">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            Terms & Conditions
+            Essay Help
           </Link>
           <Link href="#">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            Privacy
+            Dissertation Help
           </Link>
           <Link href="#">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            Feedbacks
+            Thesis Paper Help
+          </Link>
+          <Link href="#">
+            <span>
+              <Image width={25} src={arrow} alt="" />
+            </span>
+            Programming Help
           </Link>
         </div>
       </div>
       <div className={styles.footerColumns}>
-        <h3>Have Questions?</h3>
+        <h3>Get In Touch</h3>
         <div className={styles.questionsCol}>
           <p>
             {" "}
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            203 Fake St. Mountain View, San Francisco, California, USA
+            Jaipur, Rajasthan, India
           </p>
-          <a href="tel:123-456-7890">
+          <a href="tel:+91 93515 83366">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            123-456-7890
+            +91 935-158-3366
           </a>
           <a href="mailto: support@swipeupassignments.com">
             <span>
