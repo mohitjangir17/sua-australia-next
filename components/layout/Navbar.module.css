@@ -1,60 +1,44 @@
-.socialLogos {
-  display: none;
-}
-
-.socialLogos > a {
-  margin: 0.2em 0;
-}
-
-.socialIconn {
-  transition: 0.4s;
-}
-
-.socialIconn:hover {
-  cursor: pointer;
-  transition: 0.4s;
-  transform: scale(1.2);
-}
-
-.poster {
+.LogoSection {
   display: flex;
-  padding: 1em 1.2em;
+  padding: 0em 1em;
+  background-color: white;
+  justify-content: space-between;
 }
 
-.poster > a {
-  background-color: aliceblue;
-  margin-top: -1.1em;
+.headerBar>a {
+  height: 70px;
 }
 
-.poster > a > img {
+.headerBar>a>img {
   width: 75px;
   height: 60px;
+  margin-left: -1em;
 }
-.Navbar {
+
+/* .Navbar {
   background-color: rgb(240, 255, 255, 0.5);
   margin: 1em;
   border-radius: 10px;
-}
-
-.Navbar > nav > a {
-  margin: 1em 2em;
-}
-
-.Navbar {
   padding: 1em;
-  background-color: rgb(240, 255, 255, 0.5);
-}
+} */
+
+/* .Navbar>nav>a {
+  margin: 1em 1em;
+} */
 
 .desktopNavbar {
   display: none;
 }
 
 .mobileNavbar p {
-  color: white;
+  /* color: white; */
   font-size: large;
   margin-left: 1em;
-  width: fitContent;
+  display: block;
+  margin-top: .8em;
+  padding-top: .5em;
   transition: 0.7s;
+  text-align: right;
 }
 
 .mobileNavbar p:hover {
@@ -64,52 +48,49 @@
   transform: scale(1.1);
 }
 
-.mobileNavbar > span {
+.mobileNavbar>span {
   display: block;
   position: relative;
   animation: navSlider 0.7s forwards;
 }
 
-.navlist > a {
+.navlist>a {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: white;
-  margin: 1.5em 2em;
+  margin: 1.5em 0em;
   transition: 0.7s;
-  width: maxContent;
+  text-align: right;
 }
 
-.navlist > a:hover {
+.navlist>a:hover {
   transition: 0.7s;
   color: #b78456;
 }
 
-.navlist > a:focus {
+.navlist>a:focus {
   transition: 0.7s;
   color: #b78456;
   outline: none;
 }
 
-.Navbar > nav > a:focus {
+.Navbar>nav>a:focus {
   transition: 0.7s;
   color: #b78456;
   outline: none;
 }
 
-.Navbar > nav > a {
+.Navbar>nav>a {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: white;
-  margin: 2em;
+  /* margin: 1em; */
   text-decoration: none;
-  color: white;
   transition: 0.7s;
   font-size: large;
 }
 
-.Navbar > nav > a:hover {
+.Navbar>nav>a:hover {
   transition: 0.7s;
   color: #b78456;
 }
@@ -151,11 +132,11 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .Navbar {
+  /* .Navbar {
     padding: 1em;
     background-color: rgb(240, 255, 255, 0.5);
     font-size: large;
-  }
+  } */
 
   .desktopNavbar {
     display: none;
@@ -165,25 +146,24 @@
     display: block;
   }
 
-  .navlist > a {
+  .navlist>a {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    color: white;
-    margin: 2em;
+    /* margin: 2em; */
   }
 
-  .mobileNavbar > nav > a {
+  .mobileNavbar>nav>a {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    color: white;
+    /* color: white; */
     margin: 2em;
   }
 
-  .Navbar > nav > a {
+  .Navbar>nav>a {
     text-decoration: none;
-    color: white;
+    /* color: white; */
   }
 
   @-webkit-keyframes navSlider {
@@ -200,54 +180,45 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .LogoSection {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    padding: 0 .5em;
+
+  }
+
   .desktopNavbar {
     display: flex;
   }
 
-  .mobileNavbar {
+  .mobileNavbar,
+  .navlist {
     display: none;
   }
 
-  .Navbar > nav > a {
-    margin: 1em 2em;
+  .desktopNavbar {
+    margin-top: .5em;
   }
-  .poster > a > img {
+
+  .desktopNavbar>a {
+    margin: 1em;
+  }
+
+  .headerBar>a>img {
     width: 95px;
     height: 80px;
   }
 }
 
 @media only screen and (min-width: 960px) {
-  .Navbar {
-    background-color: rgb(240, 255, 255, 0.5);
-    margin: 1em 4em;
-  }
-  .sociaLogos {
-    display: block;
-  }
-
-  .socialIconn {
-    font-size: xxx-large;
-    color: white;
-    transition: 0.4s;
-    margin: 0em 0.4em;
-  }
-
-  .poster {
-    display: flex;
-    justifycontent: space-between;
-    padding: 1em 4.8em;
+  .LogoSection {
+    padding: 0 5em;
   }
 }
 
 @media only screen and (min-width: 1300px) {
-  .Navbar {
-    background-color: rgb(240, 255, 255, 0.5);
-    margin: 1em 5em;
-  }
-  .poster {
-    display: flex;
-    justifycontent: space-between;
-    padding: 1em 5.8em;
+  .LogoSection {
+    padding: 0 11em;
   }
 }

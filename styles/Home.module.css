@@ -212,6 +212,7 @@
 
 .benifitsContent {
   padding: 0.2em;
+  text-align: justify;
 }
 
 .benifitsContent span {
@@ -383,7 +384,7 @@ section.courseItemContainer:focus {
 }
 
 .supportList {
-  background: url(../public/resources/feature_1.jpg), #b7835678;
+  background: url(../public/resources/1no.png), #ffffff;
   background-blend-mode: darken;
   margin: 1em auto;
   height: 200px;
@@ -621,8 +622,6 @@ section.courseItemContainer:focus {
     margin: 4em 1em;
   }
 
-
-
   .Herotext>h1 {
     font-weight: 800;
 
@@ -651,7 +650,7 @@ section.courseItemContainer:focus {
   /* -----------------Upload Form---------------- */
   .UploadForm {
     position: absolute;
-    top: 15em;
+    top: 8.5em;
     right: 1em;
 
     width: 45vw;
@@ -718,7 +717,6 @@ section.courseItemContainer:focus {
 
   .Herotext {
     display: block;
-
     margin: 3em 1em 3em 5em;
   }
 
@@ -758,7 +756,7 @@ section.courseItemContainer:focus {
 
   /* -----------------UploadForm---------------- */
   .UploadForm {
-    top: 15em;
+    top: 8.5em;
     right: 5em;
 
     width: 40vw;
@@ -779,15 +777,6 @@ section.courseItemContainer:focus {
 
   /* -----------------Benifits---------------- */
 
-  .benifitsImg {
-    /* background-image: url(../components/resources/girl-vector.png); */
-    background-repeat: no-repeat;
-    display: block;
-    width: 90%;
-    height: auto;
-    z-index: 1;
-    background-position: center;
-  }
 
   .Benifits {
     display: flex;
@@ -796,8 +785,19 @@ section.courseItemContainer:focus {
     padding: 3em 0em;
   }
 
+  .benifitsImg {
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    flex: .4;
+    background-position: center;
+  }
+
   .benifitsContent {
     padding: 3em;
+    flex: .6;
   }
 
   .benifitsContent span {
@@ -866,7 +866,7 @@ section.courseItemContainer:focus {
 
   .Herotext {
     display: block;
-    margin: 3em 1em 3em 6em;
+    margin: 3em 1em 3em 11em;
     /* width: 95vw; */
   }
 
@@ -885,12 +885,12 @@ section.courseItemContainer:focus {
     width: 45%;
   }
 
-  /* ---------------UploadForm------------------------ */
+  /* -----------UploadForm--------- */
   .UploadForm {
-    top: 15em;
-    right: 6em;
+    top: 9em;
+    right: 12em;
 
-    width: 35vw;
+    width: 30vw;
     padding: 0;
     margin: 0;
     background-color: none;
@@ -918,7 +918,7 @@ section.courseItemContainer:focus {
     margin: 1em 0.5em;
   }
 
-  /* ----------Our Support------------------ */
+  /* ------Our Support---------- */
   .supportArticle>section {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
