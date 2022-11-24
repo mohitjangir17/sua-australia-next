@@ -182,20 +182,6 @@ export default function Home() {
                 <div>
                   <Image src={bookicon} alt="Img" />
                   <div>
-                    <h3>High Quality</h3>
-                    <p>
-                      We provide top-notch services to help scholars take a sigh
-                      of relief and reduce the burden of writing lengthy
-                      documents. We offer a high-quality paper that meets all
-                      quality standards. We know how important it is to submit
-                      plagiarism-free work to your professor and to avoid that
-                      we check our completed papers at least three times.
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <Image src={bookicon} alt="Img" />
-                  <div>
                     <h3>No Hidden fee</h3>
                     <p>
                       Hidden fees are everywhere, are not they? Not quite. We
@@ -207,6 +193,21 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
+                <div>
+                  <Image src={bookicon} alt="Img" />
+                  <div>
+                    <h3>High Quality</h3>
+                    <p>
+                      We provide top-notch services to help scholars take a sigh
+                      of relief and reduce the burden of writing lengthy
+                      documents. We offer a high-quality paper that meets all
+                      quality standards. We know how important it is to submit
+                      plagiarism-free work to your professor and to avoid that
+                      we check our completed papers at least three times.
+                    </p>
+                  </div>
+                </div>
+
                 <div>
                   <Image src={bookicon} alt="Img" />
                   <div>
