@@ -160,11 +160,24 @@ export default function Home() {
                 }}
               >
                 {" "}
-                {/* <Image src={womanImg} alt="" />{" "} */}
               </div>
               <div className={styles.benifitsContent}>
                 <span>Expertise in every field</span>
                 <h3> Benifits of working with us</h3>
+                <div>
+                  <Image src={bookicon} alt="Img" />
+                  <div>
+                    <h3>No Hidden fee</h3>
+                    <p>
+                      Hidden fees are everywhere, are not they? Not quite. We
+                      are recognized as a trusted name when it comes to
+                      providing affordable assignment writing services with no
+                      hidden fees. Our services will never be heavy on the
+                      pockets of students. Therefore, always count on us for
+                      effective and cheap assignment help.
+                    </p>
+                  </div>
+                </div>
                 <div>
                   <Image src={bookicon} alt="Img" />
                   <div>
@@ -194,20 +207,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div>
-                  <Image src={bookicon} alt="Img" />
-                  <div>
-                    <h3>No Hidden fee</h3>
-                    <p>
-                      Hidden fees are everywhere, aren’t they? Not quite. We are
-                      recognized as a trusted name when it comes to providing
-                      affordable assignment writing services with no hidden
-                      fees. Our services will never be heavy on the pockets of
-                      students. Therefore, always count on us for effective and
-                      cheap assignment help.
-                    </p>
-                  </div>
-                </div>
+
                 <div>
                   <Image src={bookicon} alt="Img" />
                   <div>
