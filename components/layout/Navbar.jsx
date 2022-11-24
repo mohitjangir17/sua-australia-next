@@ -13,7 +13,7 @@ function Navbar() {
   return (
     <>
       <div className={styles.LogoSection}>
-        <div className={styles.poster}>
+        <div className={styles.headerBar}>
           <Link href="/">
             <Image
               src="/resources/logo512.png"
@@ -22,34 +22,26 @@ function Navbar() {
               alt="logo"
             />
           </Link>{" "}
-          <div className={styles.sociaLogos}>
-            <a href="https://facebook.com">
-              {/* <FontAwesomeIcon className="socialIconn" icon={faFacebook} /> */}
-            </a>
-            <a href="https://facebook.com">
-              {/* <FontAwesomeIcon className="socialIconn" icon={faInstagram} /> */}
-            </a>
-          </div>{" "}
         </div>
-      </div>
-      <div className={styles.Navbar}>
-        <nav className={styles.mobileNavbar}>
-          <p onClick={handleClick}>Menu</p>
-          <ToggleDisplay show={show}>
-            <div className={styles.navlist}>
-              <Link href="/">Home</Link>
-              <Link href="/assignment-query">Assignment Query</Link>
-              <Link href="/contact">Contact</Link>
-              <Link href="/blogs">Blogs</Link>
-            </div>
-          </ToggleDisplay>
-        </nav>
-        <nav className={styles.desktopNavbar}>
-          <Link href="/">Home</Link>
-          <Link href="/assignment-query">Assignment Query</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/blogs">Blogs</Link>
-        </nav>
+        <div className={styles.Navbar}>
+          <nav className={styles.mobileNavbar}>
+            <p onClick={handleClick}>Menu</p>
+            <ToggleDisplay show={show}>
+              <div className={styles.navlist}>
+                <Link href="/">Home</Link>
+                <Link href="/assignment-query">Assignment Query</Link>
+                <Link href="/contact">Contact</Link>
+                <Link href="/blogs">Blogs</Link>
+              </div>
+            </ToggleDisplay>
+          </nav>
+          <nav className={styles.desktopNavbar}>
+            <Link href="/">Home</Link>
+            <Link href="/assignment-query">Assignment Query</Link>
+            <Link href="/contact">Contact</Link>
+            <Link href="/blogs">Blogs</Link>
+          </nav>
+        </div>
       </div>
     </>
   );

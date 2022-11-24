@@ -113,6 +113,20 @@
 }
 
 /* -----------------Upload Form---------------- */
+.goodGrades {
+  color: #b78456;
+  font-size: 3rem;
+  max-width: 400px;
+}
+
+.goodGradesP {
+  color: #b78456;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: -1em;
+}
+
 .UploadForm {
   box-sizing: border-box;
 }
@@ -198,6 +212,7 @@
 
 .benifitsContent {
   padding: 0.2em;
+  text-align: justify;
 }
 
 .benifitsContent span {
@@ -369,7 +384,7 @@ section.courseItemContainer:focus {
 }
 
 .supportList {
-  background: url(../public/resources/feature_1.jpg), #b7835678;
+  background: url(../public/resources/1no.png), #ffffff;
   background-blend-mode: darken;
   margin: 1em auto;
   height: 200px;
@@ -432,6 +447,7 @@ section.courseItemContainer:focus {
 .FeatureList>div {
   border-left: #b78456 3px solid;
   padding-left: 0.4em;
+  text-align: left;
 }
 
 .FeatureList>img {
@@ -606,8 +622,6 @@ section.courseItemContainer:focus {
     margin: 4em 1em;
   }
 
-
-
   .Herotext>h1 {
     font-weight: 800;
 
@@ -636,10 +650,10 @@ section.courseItemContainer:focus {
   /* -----------------Upload Form---------------- */
   .UploadForm {
     position: absolute;
-    top: 22em;
+    top: 8.5em;
     right: 1em;
 
-    width: 35vw;
+    width: 45vw;
     padding: 0;
     margin: 0;
     background-color: none;
@@ -703,17 +717,14 @@ section.courseItemContainer:focus {
 
   .Herotext {
     display: block;
-
     margin: 3em 1em 3em 5em;
   }
 
   .Herotext>h1 {
     font-weight: 700;
-
-    /* font-size: 3.7em; */
     line-height: 1.2;
     margin-bottom: 1em;
-    width: 50%;
+    width: 45%;
   }
 
   .Herotext>p {
@@ -723,7 +734,7 @@ section.courseItemContainer:focus {
     display: block;
     letter-spacing: 2px;
     font-family: inherit;
-    width: 50%;
+    width: 45%;
   }
 
   .social-logos {
@@ -745,10 +756,10 @@ section.courseItemContainer:focus {
 
   /* -----------------UploadForm---------------- */
   .UploadForm {
-    top: 22em;
+    top: 8.5em;
     right: 5em;
 
-    width: 30vw;
+    width: 40vw;
     padding: 0;
     margin: 0;
     background-color: none;
@@ -766,15 +777,6 @@ section.courseItemContainer:focus {
 
   /* -----------------Benifits---------------- */
 
-  .benifitsImg {
-    /* background-image: url(../components/resources/girl-vector.png); */
-    background-repeat: no-repeat;
-    display: block;
-    width: 90%;
-    height: auto;
-    z-index: 1;
-    background-position: center;
-  }
 
   .Benifits {
     display: flex;
@@ -783,8 +785,19 @@ section.courseItemContainer:focus {
     padding: 3em 0em;
   }
 
+  .benifitsImg {
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    flex: .4;
+    background-position: center;
+  }
+
   .benifitsContent {
     padding: 3em;
+    flex: .6;
   }
 
   .benifitsContent span {
@@ -853,7 +866,7 @@ section.courseItemContainer:focus {
 
   .Herotext {
     display: block;
-    margin: 3em 1em 3em 6em;
+    margin: 3em 1em 3em 11em;
     /* width: 95vw; */
   }
 
@@ -861,7 +874,7 @@ section.courseItemContainer:focus {
     font-weight: 800;
     color: #fff;
     font-size: 3.7rem;
-    width: 55%;
+    width: 45%;
   }
 
   .Herotext>p {
@@ -869,15 +882,15 @@ section.courseItemContainer:focus {
     color: rgba(255, 255, 255, 0.7);
     font-size: 14px;
     letter-spacing: 2px;
-    width: 55%;
+    width: 45%;
   }
 
-  /* ---------------UploadForm------------------------ */
+  /* -----------UploadForm--------- */
   .UploadForm {
-    top: 22em;
-    right: 11em;
+    top: 9em;
+    right: 12em;
 
-    width: 25vw;
+    width: 30vw;
     padding: 0;
     margin: 0;
     background-color: none;
@@ -905,7 +918,7 @@ section.courseItemContainer:focus {
     margin: 1em 0.5em;
   }
 
-  /* ----------Our Support------------------ */
+  /* ------Our Support---------- */
   .supportArticle>section {
     display: grid;
     grid-template-columns: auto auto auto auto auto;

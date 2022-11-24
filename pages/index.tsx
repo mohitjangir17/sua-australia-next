@@ -1,15 +1,13 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
+import Image from "next/image";
 import { useState } from "react";
+import CountUp from "react-countup";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Blogs from "../components/Blogs";
-import CountUp from "react-countup";
-import HeaderText from "../components/HeaderText";
-import FadeInWhenVisible from "../components/Fiwv";
+import styles from "../styles/Home.module.css";
 
+// Resources Import
 import bookicon from "../public/resources/book-logo.png";
 import itemsDelivered from "../public/resources/delivered.png";
 import teamLogo from "../public/resources/teamwork.png";
@@ -27,8 +25,15 @@ import feature3 from "../public/resources/support-3.png";
 import feature4 from "../public/resources/support-4.png";
 import feature5 from "../public/resources/support-5.png";
 import feature6 from "../public/resources/support-6.png";
-import Navbar from "../components/layout/Navbar";
 
+// Components Import
+import Navbar from "../components/layout/Navbar";
+import Blogs from "../components/Blogs";
+import HeaderText from "../components/HeaderText";
+import FadeInWhenVisible from "../components/Fiwv";
+import clientReviewsData from "../clientReviewsData/data";
+
+// Testimonials Slider
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 1280 },
@@ -52,6 +57,7 @@ const responsive = {
 };
 
 export default function Home() {
+  // Form State
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
@@ -80,36 +86,6 @@ export default function Home() {
   //   storage.setItem("subject", subject);
   // }, [firstname, lastname, email, subject, storage]);
 
-  const [testimonialsData, setTestimonialsData] = useState([
-    {
-      id: 1,
-      reviewerName: "Roger ",
-      courseName: "Web Development",
-      reviewDescription:
-        "1 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    },
-    {
-      id: 2,
-      reviewerName: "Roger ",
-      courseName: "DBMS",
-      reviewDescription:
-        "2 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    },
-    {
-      id: 3,
-      reviewerName: "Roger ",
-      courseName: "JS",
-      reviewDescription:
-        "3 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    },
-    {
-      id: 4,
-      reviewerName: "Roger ",
-      courseName: "React",
-      reviewDescription:
-        "4 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
-    },
-  ]);
   return (
     <div className={styles.container}>
       <Head>
@@ -128,12 +104,11 @@ export default function Home() {
       <HeaderText />
       {/* </section> */}
       <div className={styles.whiteBg}>
-        {/* ------------------------------Upload Form--------------------------------- */}
+        {/* ----------------Upload Form------------------------ */}
         <div className={styles.UploadForm}>
-          <form
-            action="/upload"
-            // method="post"
-          >
+          <form action="/assignment-query" method="post">
+            <h1 className={styles.goodGrades}>Need Good Grades?</h1>
+            <p className={styles.goodGradesP}>GET SOLUTION NOW!</p>
             <label htmlFor="fistname">Firstname</label> <br />
             <input
               type="text"
@@ -175,7 +150,7 @@ export default function Home() {
           </form>
         </div>
         <section className={styles.whiteBackground}>
-          {/* -----------------------Benifits-------------------------------------------- */}
+          {/* -----------------------Benifits----------------------- */}
           <FadeInWhenVisible>
             <div className={styles.Benifits}>
               <div
@@ -193,33 +168,59 @@ export default function Home() {
                 <div>
                   <Image src={bookicon} alt="Img" />
                   <div>
-                    <h3>Online Courses</h3>
+                    <h3>Experienced Staff</h3>
                     <p>
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
+                      Our in-house team of experienced and professional
+                      assignment helpers holds PhDs. A certified professional
+                      with a strong academic background and deep expertise who
+                      are committed to providing Online Assignment Help services
+                      with unique, informative, and error-free 100% original
+                      documents. So if you need university assignment help, feel
+                      free to contact us anytime.
                     </p>
                   </div>
                 </div>
                 <div>
                   <Image src={bookicon} alt="Img" />
                   <div>
-                    <h3>Online Courses</h3>
+                    <h3>High Quality</h3>
                     <p>
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
+                      We provide top-notch services to help scholars take a sigh
+                      of relief and reduce the burden of writing lengthy
+                      documents. We offer a high-quality paper that meets all
+                      quality standards. We know how important it is to submit
+                      plagiarism-free work to your professor and to avoid that
+                      we check our completed papers at least three times.
                     </p>
                   </div>
                 </div>
                 <div>
                   <Image src={bookicon} alt="Img" />
                   <div>
-                    <h3>Online Courses</h3>
+                    <h3>No Hidden fee</h3>
                     <p>
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
+                      Hidden fees are everywhere, aren’t they? Not quite. We are
+                      recognized as a trusted name when it comes to providing
+                      affordable assignment writing services with no hidden
+                      fees. Our services will never be heavy on the pockets of
+                      students. Therefore, always count on us for effective and
+                      cheap assignment help.
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <Image src={bookicon} alt="Img" />
+                  <div>
+                    <h3>Proofreading</h3>
+                    <p>
+                      Our academic proofreaders team understands the importance
+                      of 100% error-free writing, which helps make
+                      SwipeupAssignments.com the best service. Our experts
+                      proofread your content and make any necessary corrections
+                      before submitting it. Each work is edited and proofread
+                      multiple times to ensure quality and error-free work.
+                      “Write My Assignment” service offered by us is also the
+                      best.
                     </p>
                   </div>
                 </div>
@@ -227,71 +228,105 @@ export default function Home() {
             </div>
           </FadeInWhenVisible>
 
-          {/* -------------------------Figures----------------------------- */}
-          <div className={styles.Figures}>
-            <FadeInWhenVisible>
-              {/* <FontAwesomeIcon icon={faCircleCheck} /> */}
-              <div className={styles.figuresData}>
-                <Image src={itemsDelivered} alt="" />
-                <div>
-                  <h1>
-                    <CountUp end={723} useEasing duration={7} enableScrollSpy />
-                  </h1>
-                  <p>
-                    DELIVERED <br /> ORDERS
-                  </p>
+          {/* ------------------------OurFeatures---------------- */}
+          <FadeInWhenVisible>
+            <div className={styles.OurFeatures}>
+              <span className={styles.spanOurFeatures}>Features</span>
+              <h2>Features that we give</h2>
+              <section className={styles.FeaturesContainer}>
+                <div className={styles.FeatureList}>
+                  <Image src={feature1} alt="" />
+                  <div>
+                    <h3>Plagarism Free</h3>
+                    <p>
+                      A 100% original solution to reduce the risk of negative
+                      marking.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </FadeInWhenVisible>
-            <FadeInWhenVisible>
-              <div className={styles.figuresData}>
-                <Image src={teamLogo} alt="" />
-                <div>
-                  <h1>
-                    <CountUp
-                      end={1308}
-                      useEasing
-                      duration={7}
-                      enableScrollSpy
-                    />
-                  </h1>
-                  <p>EXPERTS</p>
+                <div className={styles.FeatureList}>
+                  <Image src={feature2} alt="" />
+                  <div>
+                    <h3>24*7 Help</h3>
+                    <p>
+                      Around the clock - If you have any problems with your
+                      assignments, We are always here to help.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </FadeInWhenVisible>
-            <FadeInWhenVisible>
-              <div className={styles.figuresData}>
-                <Image src={customerLogo} alt="" />
-                <div>
-                  <h1>
-                    <CountUp
-                      end={50221}
-                      useEasing
-                      duration={7}
-                      enableScrollSpy
-                    />
-                  </h1>
-                  <p>CUSTOMERS</p>
+                <div className={styles.FeatureList}>
+                  <Image src={feature3} alt="" />
+                  <div>
+                    <h3>On Time Delivery</h3>
+                    <p>
+                      Submit before the deadline, no matter how tough the task
+                      is.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </FadeInWhenVisible>
-            <FadeInWhenVisible>
-              <div className={styles.figuresData}>
-                <Image src={ratingLogo} alt="" />
-                <div>
-                  <h1>
-                    <CountUp end={9} useEasing duration={7} enableScrollSpy />
-                    /10
-                  </h1>
-                  <p>
-                    CUSTOMER <br /> RATING
-                  </p>
+                <div className={styles.FeatureList}>
+                  <Image src={feature4} alt="" />
+                  <div>
+                    <h3>P.Hd. Expert Writers</h3>
+                    <p>
+                      Get Rewrites of your task an unlimited number of times
+                      until you are satisfied.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </FadeInWhenVisible>
-          </div>
+                <div className={styles.FeatureList}>
+                  <Image src={feature5} alt="" />
+                  <div>
+                    <h3>Confidential</h3>
+                    <p>
+                      We guarantee the safety of your information from malicious
+                      third parties.
+                    </p>
+                  </div>
+                </div>
+                <div className={styles.FeatureList}>
+                  <Image src={feature6} alt="" />
+                  <div>
+                    <h3>Best Price</h3>
+                    <p>
+                      Get 100% accurate solutions on 250+ topics and improve
+                      your grade point average.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </FadeInWhenVisible>
 
-          {/* -----------------------------Courses------------------------------------ */}
+          {/* -------------------Our Support----------------- */}
+          <FadeInWhenVisible>
+            <div className={styles.OurSupport}>
+              <span className={styles.spanOurSupport}>Our Support</span>
+              <h2>Step by Step Guide </h2>
+              <article className={styles.supportArticle}>
+                <section>
+                  <div className={styles.supportList}>
+                    {" "}
+                    <span> Upload Asssignment </span>
+                  </div>
+                  <div className={styles.supportList}>
+                    <span> Pay for Assignment </span>
+                  </div>
+                  <div className={styles.supportList}>
+                    <span> Track Progress</span>
+                  </div>
+                  <div className={styles.supportList}>
+                    <span> Delivery </span>
+                  </div>
+                  <div className={styles.supportList}>
+                    <span> Feedback </span>
+                  </div>
+                </section>
+              </article>
+            </div>
+          </FadeInWhenVisible>
+
+          {/* -----------------------Courses------------------------ */}
           <div className={styles.Courses}>
             <span>Courses</span>
             <h2>Courses that we provide</h2>
@@ -421,105 +456,71 @@ export default function Home() {
             </section>
           </div>
 
-          {/* ----------------------Our Support----------------------------------------- */}
-          <FadeInWhenVisible>
-            <div className={styles.OurSupport}>
-              <span className={styles.spanOurSupport}>Our Support</span>
-              <h2>Step by Step Guide </h2>
-              <article className={styles.supportArticle}>
-                <section>
-                  <div className={styles.supportList}>
-                    {" "}
-                    <span> Upload Asssignment </span>
-                  </div>
-                  <div className={styles.supportList}>
-                    <span> Pay for Assignment </span>
-                  </div>
-                  <div className={styles.supportList}>
-                    <span> Track Progress</span>
-                  </div>
-                  <div className={styles.supportList}>
-                    <span> Delivery </span>
-                  </div>
-                  <div className={styles.supportList}>
-                    <span> Feedback </span>
-                  </div>
-                </section>
-              </article>
-            </div>
-          </FadeInWhenVisible>
+          {/* -------------------------Figures--------------------- */}
+          <div className={styles.Figures}>
+            <FadeInWhenVisible>
+              {/* <FontAwesomeIcon icon={faCircleCheck} /> */}
+              <div className={styles.figuresData}>
+                <Image src={itemsDelivered} alt="" />
+                <div>
+                  <h1>
+                    <CountUp end={723} useEasing duration={7} enableScrollSpy />
+                  </h1>
+                  <p>
+                    DELIVERED <br /> ORDERS
+                  </p>
+                </div>
+              </div>
+            </FadeInWhenVisible>
+            <FadeInWhenVisible>
+              <div className={styles.figuresData}>
+                <Image src={teamLogo} alt="" />
+                <div>
+                  <h1>
+                    <CountUp
+                      end={1308}
+                      useEasing
+                      duration={7}
+                      enableScrollSpy
+                    />
+                  </h1>
+                  <p>EXPERTS</p>
+                </div>
+              </div>
+            </FadeInWhenVisible>
+            <FadeInWhenVisible>
+              <div className={styles.figuresData}>
+                <Image src={customerLogo} alt="" />
+                <div>
+                  <h1>
+                    <CountUp
+                      end={50221}
+                      useEasing
+                      duration={7}
+                      enableScrollSpy
+                    />
+                  </h1>
+                  <p>CUSTOMERS</p>
+                </div>
+              </div>
+            </FadeInWhenVisible>
+            <FadeInWhenVisible>
+              <div className={styles.figuresData}>
+                <Image src={ratingLogo} alt="" />
+                <div>
+                  <h1>
+                    <CountUp end={9} useEasing duration={7} enableScrollSpy />
+                    /10
+                  </h1>
+                  <p>
+                    CUSTOMER <br /> RATING
+                  </p>
+                </div>
+              </div>
+            </FadeInWhenVisible>
+          </div>
 
-          {/* ------------------------OurFeatures--------------------------- */}
-          <FadeInWhenVisible>
-            <div className={styles.OurFeatures}>
-              <span className={styles.spanOurFeatures}>Features</span>
-              <h2>Features that we give</h2>
-              <section className={styles.FeaturesContainer}>
-                <div className={styles.FeatureList}>
-                  <Image src={feature1} alt="" />
-                  <div>
-                    <h3>Plagarism Free</h3>
-                    <p>
-                      A 100% original solution to reduce the risk of negative
-                      marking.
-                    </p>
-                  </div>
-                </div>
-                <div className={styles.FeatureList}>
-                  <Image src={feature2} alt="" />
-                  <div>
-                    <h3>24*7 Help</h3>
-                    <p>
-                      Around the clock - If you have any problems with your
-                      assignments, We are always here to help.
-                    </p>
-                  </div>
-                </div>
-                <div className={styles.FeatureList}>
-                  <Image src={feature3} alt="" />
-                  <div>
-                    <h3>On Time Delivery</h3>
-                    <p>
-                      Submit before the deadline, no matter how tough the task
-                      is.
-                    </p>
-                  </div>
-                </div>
-                <div className={styles.FeatureList}>
-                  <Image src={feature4} alt="" />
-                  <div>
-                    <h3>P.Hd. Expert Writers</h3>
-                    <p>
-                      Get Rewrites of your task an unlimited number of times
-                      until you are satisfied.
-                    </p>
-                  </div>
-                </div>
-                <div className={styles.FeatureList}>
-                  <Image src={feature5} alt="" />
-                  <div>
-                    <h3>Confidential</h3>
-                    <p>
-                      We guarantee the safety of your information from malicious
-                      third parties.
-                    </p>
-                  </div>
-                </div>
-                <div className={styles.FeatureList}>
-                  <Image src={feature6} alt="" />
-                  <div>
-                    <h3>Best Price</h3>
-                    <p>
-                      Get 100% accurate solutions on 250+ topics and improve
-                      your grade point average.
-                    </p>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </FadeInWhenVisible>
-
-          {/* -----------------------Testmonials------------------------------------ */}
+          {/* -----------------------Testmonials---------------------- */}
           <div className={styles.Testimonials}>
             <span className={styles.spanTestimonials}>Testimonials</span>
             <h2>What our clients say?</h2>
@@ -533,20 +534,17 @@ export default function Home() {
                 autoPlay={true}
                 autoPlaySpeed={3000}
               >
-                {testimonialsData.map((testimonial) => (
-                  <div
-                    key={testimonial.id}
-                    className={styles.testimonials_list}
-                  >
+                {clientReviewsData.map((review) => (
+                  <div key={review.id} className={styles.testimonials_list}>
                     <div>
                       {/* <img src={reactlogo} alt="person" /> */}
                       <span>
-                        <h3> {testimonial.reviewerName}</h3>
-                        <p>{testimonial.courseName}</p>
+                        <h3> {review.reviewerName}</h3>
+                        <p>{review.courseName}</p>
                       </span>
                     </div>
                     <p className={styles.reviewDescription}>
-                      {testimonial.reviewDescription}
+                      {review.reviewDescription}
                     </p>
                   </div>
                 ))}
@@ -554,7 +552,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* -------------------------Blogs Component------------------------------- */}
+          {/* ----------------Blogs Component---------------- */}
           <FadeInWhenVisible>
             <div className={styles.Blogs}>
               <span className={styles.spanBlogs}>Blogs</span>

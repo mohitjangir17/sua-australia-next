@@ -4,6 +4,7 @@ import HeaderOtherPages from "../components/HeaderOtherPages";
 import HeadImage from "../public/resources/mainBanner.jpg";
 import styles from "../styles/AssignmentQuery.module.css";
 import homestyles from "../styles/Home.module.css";
+
 export default function AssignmentQuery() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -14,6 +15,18 @@ export default function AssignmentQuery() {
   const [description, setDescription] = useState("");
   const [words, setWords] = useState("");
   const [deadline, setDeadline] = useState("");
+
+  // const formInitial = useState({
+  //   firstName: "",
+  //   lastName: "",
+  //   email: "",
+  //   subject: "",
+  //   contact: "",
+  //   title: "",
+  //   description: "",
+  //   words: "",
+  //   deadline: "",
+  // });
   return (
     <>
       <Head>
@@ -25,6 +38,8 @@ export default function AssignmentQuery() {
       <main className={homestyles.mainContainer}>
         <div className={styles.Upload}>
           <form action="" method="post">
+            <h1 className={styles.goodGrades}>Need Good Grades?</h1>
+            <p className={styles.goodGradesP}>GET SOLUTION NOW!</p>
             <div className={styles.splitFields}>
               {" "}
               <div>

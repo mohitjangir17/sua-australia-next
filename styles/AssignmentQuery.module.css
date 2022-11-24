@@ -1,6 +1,19 @@
 /* body {
     box-sizing: border-box;
 } */
+.goodGrades {
+    color: #b78456;
+    font-size: 3rem;
+    max-width: 400px;
+}
+
+.goodGradesP {
+    color: #b78456;
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: -1em;
+}
 
 .Upload {
     background-color: white;
@@ -71,6 +84,16 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .goodGrades {
+        font-size: 4rem;
+        margin-left: .2em;
+    }
+
+    .goodGradesP {
+        margin-left: 1em;
+
+    }
+
     .Upload {
         padding: 8em 0;
     }

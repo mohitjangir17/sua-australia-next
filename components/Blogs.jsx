@@ -3,7 +3,6 @@ import codingguy from "../public/resources/coding-g03bcc4bcb_1280.jpg";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Router } from "next/router";
 
 function Blogs() {
   useEffect(() => {
