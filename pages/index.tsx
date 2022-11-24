@@ -160,7 +160,6 @@ export default function Home() {
                 }}
               >
                 {" "}
-                {/* <Image src={womanImg} alt="" />{" "} */}
               </div>
               <div className={styles.benifitsContent}>
                 <span>Expertise in every field</span>
