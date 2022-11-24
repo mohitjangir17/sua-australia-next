@@ -167,6 +167,20 @@ export default function Home() {
                 <div>
                   <Image src={bookicon} alt="Img" />
                   <div>
+                    <h3>No Hidden fee</h3>
+                    <p>
+                      Hidden fees are everywhere, are not they? Not quite. We
+                      are recognized as a trusted name when it comes to
+                      providing affordable assignment writing services with no
+                      hidden fees. Our services will never be heavy on the
+                      pockets of students. Therefore, always count on us for
+                      effective and cheap assignment help.
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <Image src={bookicon} alt="Img" />
+                  <div>
                     <h3>Experienced Staff</h3>
                     <p>
                       Our in-house team of experienced and professional
@@ -176,20 +190,6 @@ export default function Home() {
                       with unique, informative, and error-free 100% original
                       documents. So if you need university assignment help, feel
                       free to contact us anytime.
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <Image src={bookicon} alt="Img" />
-                  <div>
-                    <h3>No Hidden fee</h3>
-                    <p>
-                      Hidden fees are everywhere, are not they? Not quite. We
-                      are recognized as a trusted name when it comes to
-                      providing affordable assignment writing services with no
-                      hidden fees. Our services will never be heavy on the
-                      pockets of students. Therefore, always count on us for
-                      effective and cheap assignment help.
                     </p>
                   </div>
                 </div>
