@@ -202,7 +202,7 @@
   display: flex;
   z-index: 1;
   background-color: white;
-  padding: 0em;
+  padding: 1em;
   color: black;
 }
 
@@ -387,8 +387,8 @@ section.courseItemContainer:focus {
   background: url(../public/resources/1no.png), #ffffff;
   background-blend-mode: darken;
   margin: 1em auto;
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   /* border: #b78456 4px solid; */
   background-position: center;
   background-size: 14em;
@@ -509,6 +509,7 @@ section.courseItemContainer:focus {
 .Blogs {
   text-align: center;
   padding-top: 2em;
+  /* padding: 2em 1em; */
   padding-bottom: 6em;
 
 }
@@ -577,7 +578,7 @@ section.courseItemContainer:focus {
 
   .courseItemContainer {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .courseItemContainer div {
@@ -671,7 +672,8 @@ section.courseItemContainer:focus {
 
   /* -----------------Benifits---------------- */
   .Benifits {
-    padding: 4em;
+    padding: 6em 4em 4em 4em;
+    /* padding-top: 8em !important; */
   }
 
   .benifitsContent span {
@@ -700,7 +702,7 @@ section.courseItemContainer:focus {
   /* --------Ourfeatures--------------- */
   .FeaturesContainer {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 2em;
   }
 }

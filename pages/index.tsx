@@ -25,6 +25,10 @@ import feature3 from "../public/resources/support-3.png";
 import feature4 from "../public/resources/support-4.png";
 import feature5 from "../public/resources/support-5.png";
 import feature6 from "../public/resources/support-6.png";
+import hidemoney from "../public/resources/hide.png";
+import qualityImg from "../public/resources/quality-control.png";
+import experienedStaff from "../public/resources/team1.png";
+import proofread from "../public/resources/reading-book.png";
 
 // Components Import
 import Navbar from "../components/layout/Navbar";
@@ -165,7 +169,7 @@ export default function Home() {
                 <span>Expertise in every field</span>
                 <h3> Benifits of working with us</h3>
                 <div>
-                  <Image src={bookicon} alt="Img" />
+                  <Image src={hidemoney} width={200} height={200} alt="Img" />
                   <div>
                     <h3>No Hidden fee</h3>
                     <p>
@@ -179,7 +183,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <Image src={bookicon} alt="Img" />
+                  <Image
+                    src={experienedStaff}
+                    width={200}
+                    height={200}
+                    alt="Img"
+                  />
                   <div>
                     <h3>Experienced Staff</h3>
                     <p>
@@ -194,7 +203,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div>
-                  <Image src={bookicon} alt="Img" />
+                  <Image src={qualityImg} width={200} height={200} alt="Img" />
                   <div>
                     <h3>High Quality</h3>
                     <p>
@@ -209,7 +218,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <Image src={bookicon} alt="Img" />
+                  <Image src={proofread} width={200} height={200} alt="Img" />
                   <div>
                     <h3>Proofreading</h3>
                     <p>

@@ -18,9 +18,9 @@ function HeaderOtherPages(props) {
       <Navbar />
       <div className={styles.pageIndicator}>
         <h3>
-          <Link href="/sua">Home</Link>
+          <Link href="/">Home/</Link>
         </h3>
-        {/* <h1>{props.title}</h1> */}
+        <h1>{props.title}</h1>
       </div>
     </div>
   );
