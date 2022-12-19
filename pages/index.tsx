@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 import { useState } from "react";
 import CountUp from "react-countup";
 import Carousel from "react-multi-carousel";
@@ -160,7 +161,8 @@ export default function Home() {
               <div
                 className={styles.benifitsImg}
                 style={{
-                  backgroundImage: `url('/resources/girlVector.png')`,
+                  // backgroundImage: `url('/resources/girlVector.png')`,
+                  backgroundImage: `url('/resources/young-student-girl-isolated-gray-wall-smiling-camera-pressing-laptop-chest-wearing-backpack-ready-go-studies-start-new-project-suggest-new-ideas-removebg-preview.png')`,
                 }}
               >
                 {" "}
@@ -314,20 +316,45 @@ export default function Home() {
               <h2>Step by Step Guide </h2>
               <article className={styles.supportArticle}>
                 <section>
-                  <div className={styles.supportList}>
+                  <div
+                    style={{
+                      backgroundImage: `url('/resources/feature_1.jpg')`,
+                    }}
+                    className={styles.supportList}
+                  >
                     {" "}
                     <span> Upload Asssignment </span>
                   </div>
-                  <div className={styles.supportList}>
+                  <div
+                    style={{
+                      backgroundImage: `url('/resources/feature_2.png')`,
+                    }}
+                    className={styles.supportList}
+                  >
                     <span> Pay for Assignment </span>
                   </div>
-                  <div className={styles.supportList}>
+                  <div
+                    style={{
+                      backgroundImage: `url('/resources/feature_3.png')`,
+                    }}
+                    className={styles.supportList}
+                  >
                     <span> Track Progress</span>
                   </div>
-                  <div className={styles.supportList}>
+                  <div
+                    style={{
+                      backgroundImage: `url('/resources/feature_4.png')`,
+                    }}
+                    className={styles.supportList}
+                  >
                     <span> Delivery </span>
                   </div>
-                  <div className={styles.supportList}>
+                  <div
+                    style={{
+                      backgroundImage: `url('/resources/feature_5.png')`,
+                    }}
+                    className={styles.supportList}
+                  >
                     <span> Feedback </span>
                   </div>
                 </section>

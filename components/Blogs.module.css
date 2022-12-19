@@ -55,6 +55,44 @@
   margin: 4em 1em;
 }
 
+.servicesListContainer {
+  padding: 2em 0;
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+}
+
+.servicesList h4 {
+  font-size: 1.5em;
+  color: #b78456;
+  margin: 0.2em;
+}
+
+.servicesList>a {
+  width: max-content;
+  margin: .8em .5em;
+  padding: 0;
+
+}
+
+.servicesList>a:hover {
+  transition: 0.5s;
+  color: #b78456;
+  transform: scale(1.02);
+}
+
+.servicesList>a:focus {
+  transition: 0.7s;
+  color: #b78456;
+  outline: none;
+}
+
+.servicesList>a>p {
+  margin: 0;
+}
+
 @media only screen and (min-width: 600px) {
   .blogsContainer {
     display: grid;

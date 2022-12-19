@@ -1,6 +1,6 @@
 import Head from "next/head";
 import HeaderOtherPages from "../components/HeaderOtherPages";
-import HeadImage from "../public/resources/mainBanner.jpg";
+import HeadImage from "../public/resources/contact-us.jpg";
 import homestyles from "../styles/Home.module.css";
 import uploadstyles from "../styles/AssignmentQuery.module.css";
 import styles from "../styles/Contact.module.css";

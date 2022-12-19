@@ -81,8 +81,6 @@
         justify-content: center;
     }
 
-
-
     .contactLinks>div>p:nth-child(3) {
         word-break: break-all;
     }

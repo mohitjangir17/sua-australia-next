@@ -13,7 +13,7 @@
 }
 
 .mainContainer {
-  margin: 5em 0em;
+  padding: 5em 0em;
 }
 
 .whiteBg {
@@ -31,7 +31,22 @@
 }
 
 .HeaderOtherPages {
-  height: 400px;
+  height: 500px;
+}
+
+.headerotherOverlay {
+  display: block;
+  background-blend-mode: darken;
+  height: 100vh;
+  /* background-position: 32% 46%; */
+  background-repeat: no-repeat;
+  z-index: -2;
+  position: fixed;
+  min-height: 100%;
+  width: 100vw;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: color;
 }
 
 .poster a {
@@ -45,7 +60,7 @@
 }
 
 .pageIndicator {
-  margin-top: 3.5em;
+  margin-top: 10.5em;
 }
 
 .HeaderOtherPages h1 {
@@ -76,7 +91,9 @@
 .Herotext {
   display: block;
   color: white;
-  margin: 3em 1em 1em 1em;
+  height: 93vh;
+  /* height: calc(100vh -89.5px); */
+  padding: 3em 1em 1em 1em;
 }
 
 .Herotext>p {
@@ -128,14 +145,11 @@
 }
 
 .UploadForm {
-  box-sizing: border-box;
-}
-
-.UploadForm {
   background-color: white;
   padding: 4em 0;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -340,7 +354,7 @@ section.courseItemContainer:focus {
 
 /* -----------------OurSupport---------------------- */
 .OurSupport {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 2em 0;
   text-align: center;
 }
@@ -384,13 +398,12 @@ section.courseItemContainer:focus {
 }
 
 .supportList {
-  background: url(../public/resources/1no.png), #ffffff;
+  background: #00000068;
   background-blend-mode: darken;
   margin: 1em auto;
   height: 180px;
   width: 180px;
-  /* border: #b78456 4px solid; */
-  background-position: center;
+  background-position: 50% 15%;
   background-size: 14em;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -401,7 +414,8 @@ section.courseItemContainer:focus {
 
 .supportList>span {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
+  color: white;
 }
 
 /* --------------OurFeatures---------------- */
@@ -527,6 +541,10 @@ section.courseItemContainer:focus {
   text-align: center;
 }
 
+.mainContainer {
+  background-color: white;
+}
+
 @media only screen and (min-width: 600px) {
   .Herotext>button {
     width: 95vw;
@@ -634,7 +652,8 @@ section.courseItemContainer:focus {
 
   .Herotext {
     display: block;
-    min-height: 600px;
+    /* min-height: 600px; */
+    height: 77vh;
     margin: 3em 1em 1em 1em;
   }
 
@@ -713,13 +732,15 @@ section.courseItemContainer:focus {
   }
 
   .mainContainer {
-    margin: 8em 10em;
+    padding: 8em 10em;
+    background-color: white;
 
   }
 
   .Herotext {
     display: block;
     margin: 3em 1em 3em 5em;
+    height: 77vh;
   }
 
   .Herotext>h1 {
@@ -761,7 +782,7 @@ section.courseItemContainer:focus {
     top: 8.5em;
     right: 5em;
 
-    width: 40vw;
+    width: 35vw;
     padding: 0;
     margin: 0;
     background-color: none;
@@ -875,7 +896,7 @@ section.courseItemContainer:focus {
   .Herotext>h1 {
     font-weight: 800;
     color: #fff;
-    font-size: 3.7rem;
+    font-size: 3.2rem;
     width: 45%;
   }
 
@@ -892,7 +913,7 @@ section.courseItemContainer:focus {
     top: 9em;
     right: 12em;
 
-    width: 30vw;
+    width: 27vw;
     padding: 0;
     margin: 0;
     background-color: none;
