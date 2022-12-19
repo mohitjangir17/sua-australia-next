@@ -1,0 +1,93 @@
+.blogDataContainer {
+    margin: 1em;
+}
+
+.blogFlexbox {
+    margin: 0em;
+}
+
+.HeaderOtherPages {
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+
+.headerotherOverlay {
+    display: block;
+    background-blend-mode: darken;
+    height: 100vh;
+    /* background-position: 32% 46%; */
+    background-repeat: no-repeat;
+    z-index: -2;
+    position: fixed;
+    min-height: 100%;
+    width: 100vw;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: color;
+}
+
+.pageIndicator {
+    text-align: center;
+    display: block;
+    margin-top: 10em;
+    color: white;
+}
+
+.blogDataContainer>div {
+    text-align: justify;
+}
+
+.blogDataContainer>p {
+    color: #b78456;
+    font-size: 1.5em;
+}
+
+.blogDataContainer>div>h1 {
+    font-size: 1.7em;
+}
+
+.blogDataContainer>div>h2 {
+    font-size: 1.5em;
+}
+
+.blogDataContainer>a {
+    color: #b78456;
+}
+
+.blogDataContainer>div>p {
+    font-size: 1.1em;
+}
+
+@media only screen and (min-width: 768px) {
+    .blogFlexbox {
+        display: flex;
+        margin-right: 1.5em;
+        margin-left: -1em;
+    }
+
+    .blogDataContainer {
+        margin: 2em;
+        flex: .65;
+    }
+
+
+    .sideBar {
+        flex: .35;
+        margin-top: 4em;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .blogFlexbox {
+        margin: -6em;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .blogFlexbox {
+        margin: 0em;
+    }
+}

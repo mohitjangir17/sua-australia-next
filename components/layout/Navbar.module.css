@@ -52,6 +52,20 @@
   text-align: right;
 }
 
+.desktopNavbar :nth-child(5) {
+  display: block;
+  padding: .5em 1.5em;
+  border-radius: 5px;
+  margin-top: .5em;
+
+}
+
+.desktopNavbar :nth-child(5):hover {
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.639) 3px 3px 10px;
+  background-color: #b78456;
+}
+
 .navlist>a:hover {
   transition: 0.7s;
   color: #b78456;

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import HeaderOtherPages from "../components/HeaderOtherPages";
-import HeadImage from "../public/resources/mainBanner.jpg";
+import HeadImage from "../public/resources/questions-answers.jpg";
 import styles from "../styles/AssignmentQuery.module.css";
 import homestyles from "../styles/Home.module.css";
 

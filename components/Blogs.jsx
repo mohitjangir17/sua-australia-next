@@ -1,6 +1,5 @@
 import styles from "./Blogs.module.css";
 import codingguy from "../public/resources/coding-g03bcc4bcb_1280.jpg";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -27,17 +26,10 @@ function Blogs() {
       thumbnail: codingguy,
     },
   ]);
-
   return (
     <div className={styles.blogsContainer}>
       {getBlogs.map((blog) => (
-        <a
-          key={blog.id}
-          href={{
-            pathname: `/blogs/${blog.id}`,
-            state: { blogs: blog },
-          }}
-        >
+        <a key={blog.id} href={`/blogs/${blog.id}`}>
           <div className={styles.blogsList}>
             <div
               className={styles.blogThumbnailBG}
@@ -45,15 +37,8 @@ function Blogs() {
                 backgroundImage: `url(${blog.thumbnail})`,
               }}
             ></div>
-            {/* <img src={blog.thumbnail} alt="blogImg" /> */}
             <h3>{blog.title}</h3>
             <p> {blog.summary} </p>
-            {/* <p>
-                {" "}
-                {blog.summary.length > 70
-                  ? `${blog.summary.substring(0, 70)}...`
-                  : blog.summary}
-              </p> */}
 
             <div className={styles.blogInfo}>
               <p>{new Date(blog.createdAt).toDateString()}</p>

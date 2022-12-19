@@ -14,7 +14,7 @@
 
 .Upload {
     background-color: white;
-    padding: 4em 0;
+    padding: 2em 0;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
@@ -71,7 +71,7 @@
 
 @media only screen and (min-width: 600px) {
     .Upload {
-        padding: 6em 0;
+        padding: 2em 0;
     }
 
     .Upload form {
@@ -92,7 +92,7 @@
     }
 
     .Upload {
-        padding: 8em 0;
+        padding: 2em 0;
     }
 
     .Upload form {
@@ -118,16 +118,16 @@
 
 @media only screen and (min-width: 960px) {
     .Upload {
-        padding: 8em 0;
+        padding: 1em 0;
     }
 
     .Upload form {
-        width: 70%;
+        width: 90%;
     }
 }
 
 @media only screen and (min-width: 1300px) {
     .Upload form {
-        width: 70%;
+        width: 80%;
     }
 }

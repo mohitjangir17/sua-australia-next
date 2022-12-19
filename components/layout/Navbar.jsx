@@ -32,6 +32,7 @@ function Navbar() {
                 <Link href="/assignment-query">Assignment Query</Link>
                 <Link href="/contact">Contact</Link>
                 <Link href="/blogs">Blogs</Link>
+                <Link href="/login">Login</Link>
               </div>
             </ToggleDisplay>
           </nav>
@@ -40,6 +41,9 @@ function Navbar() {
             <Link href="/assignment-query">Assignment Query</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/blogs">Blogs</Link>
+            <Link href="https://app.swipeupassignments.com/auth/signin">
+              Login
+            </Link>
           </nav>
         </div>
       </div>
