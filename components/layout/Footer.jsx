@@ -84,37 +84,67 @@ function Footer() {
       <div className={styles.footerColumns}>
         <h3>Our Services</h3>
         <div className={styles.linksCol}>
-          <Link href="#">
+          <Link
+            href={{
+              pathname: "https://swipeupassignments.com/assignment-help",
+            }}
+            target="_blank"
+          >
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
             Assignment Help
           </Link>
-          <Link href="#">
+          <Link
+            href={{
+              pathname: "https://swipeupassignments.com/exam-help",
+            }}
+            target="_blank"
+          >
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
             Exam Help
           </Link>
-          <Link href="#">
+          <Link
+            href={{
+              pathname: "https://swipeupassignments.com/essay-help",
+            }}
+            target="_blank"
+          >
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
             Essay Help
           </Link>
-          <Link href="#">
+          <Link
+            href={{
+              pathname: "https://swipeupassignments.com/dissertation-help",
+            }}
+            target="_blank"
+          >
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
             Dissertation Help
           </Link>
-          <Link href="#">
+          <Link
+            href={{
+              pathname: "https://swipeupassignments.com/thesis-paper-help",
+            }}
+            target="_blank"
+          >
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
             Thesis Paper Help
           </Link>
-          <Link href="#">
+          <Link
+            href={{
+              pathname: "https://swipeupassignments.com/programming-help",
+            }}
+            target="_blank"
+          >
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
