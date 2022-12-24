@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import styles from "./Blogs.module.css";
 export default function SidebarList() {
   useEffect(() => {
@@ -21,7 +22,7 @@ export default function SidebarList() {
       description:
         "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
       date: "30-12-2022",
-      //   thumbnail: codingguy,s
+      thumbnail: "",
     },
   ]);
   return (
@@ -53,6 +54,8 @@ export default function SidebarList() {
         <h4>Our Blogs</h4>
         {getBlogs.map((blog) => (
           <a key={blog.id} href={`/blogs/${blog.id}`}>
+            {/* <Image width={200} height={200} src={blog.thumbnail} alt="" /> */}
+            {console.log(blog)}
             <p>{blog.title}</p>
           </a>
         ))}

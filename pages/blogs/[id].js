@@ -6,7 +6,6 @@ import Link from "next/link";
 import UploadForm from "../../components/UploadForm";
 import SidebarList from "../../components/SidebarList";
 import { useRouter } from "next/router";
-import GoogleAnalytics from "../../components/GoogleAnalytics";
 
 export const getStaticPaths = async () => {
   const res = await fetch("https://api.swipeupassignments.com/blogs");
