@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import Script from "next/script";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CountUp from "react-countup";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -63,33 +62,25 @@ const responsive = {
 
 export default function Home() {
   // Form State
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-
-  // const storage = sessionStorage;
-
-  // useEffect(() => {
-  //    if (storage.getItem("firstname")) {
-  //      setFirstname(storage.getItem("firstname"));
-  //    }
-  //    if (storage.getItem("lastname")) {
-  //      setLastname(storage.getItem("lastname"));
-  //    }
-  //    if (storage.getItem("email")) {
-  //      setEmail(storage.getItem("email"));
-  //    }
-  //    if (storage.getItem("subject")) {
-  //      setSubject(storage.getItem("subject"));
-  //    }
-  // }, [storage]);
-  // useEffect(() => {
-  //   storage.setItem("firstname", firstname);
-  //   storage.setItem("lastname", lastname);
-  //   storage.setItem("email", email);
-  //   storage.setItem("subject", subject);
-  // }, [firstname, lastname, email, subject, storage]);
+  const [getValue, setValue] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+  });
+  useEffect(function () {
+    window.localStorage.setItem("firstName", getValue.firstName);
+    window.localStorage.setItem("lastName", getValue.lastName);
+    window.localStorage.setItem("subject", getValue.subject);
+    window.localStorage.setItem("email", getValue.email);
+  });
+  function handleChange(evt: any) {
+    const { value } = evt.target;
+    setValue({
+      ...getValue,
+      [evt.target.name]: value,
+    });
+  }
 
   return (
     <div className={styles.container}>
@@ -117,37 +108,37 @@ export default function Home() {
             <label htmlFor="fistname">Firstname</label> <br />
             <input
               type="text"
-              name="firstname"
-              value={firstname}
+              name="firstName"
+              value={getValue.firstName}
               placeholder="Your Firstname"
-              onChange={(e) => setFirstname(e.target.value)}
+              onChange={handleChange}
             />{" "}
             <br />
             <label htmlFor="lastname">Lastname</label> <br />
             <input
               type="text"
-              name="lastname"
-              value={lastname}
+              name="lastName"
+              value={getValue.lastName}
               placeholder="Your Lastname"
-              onChange={(e) => setLastname(e.target.value)}
+              onChange={handleChange}
             />{" "}
             <br />
             <label htmlFor="email">Email address</label> <br />
             <input
               type="text"
               name="email"
-              value={email}
+              value={getValue.email}
               placeholder="Your Email"
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleChange}
             />{" "}
             <br />
             <label htmlFor="subject">Subject</label> <br />
             <input
               type="text"
               name="subject"
-              value={subject}
+              value={getValue.subject}
               placeholder="Query Subject"
-              onChange={(e) => setSubject(e.target.value)}
+              onChange={handleChange}
             />{" "}
             <br /> <br />
             {/* <Link href="/upload">Get Help</Link> */}
