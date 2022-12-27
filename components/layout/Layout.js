@@ -7,7 +7,7 @@ import GoogleAnalytics from "../GoogleAnalytics";
 function Layout(props) {
   return (
     <>
-      {/* <GoogleAnalytics /> */}
+      <GoogleAnalytics />
       <main>{props.children}</main>
       <Footer />
       <ChatBot />
