@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CountUp from "react-countup";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -36,6 +36,7 @@ import Blogs from "../components/Blogs";
 import HeaderText from "../components/HeaderText";
 import FadeInWhenVisible from "../components/Fiwv";
 import clientReviewsData from "../clientReviewsData/data";
+import AppContext from "../components/AppContext";
 
 // Testimonials Slider
 const responsive = {
@@ -68,12 +69,8 @@ export default function Home() {
     email: "",
     subject: "",
   });
-  useEffect(function () {
-    window.localStorage.setItem("firstName", getValue.firstName);
-    window.localStorage.setItem("lastName", getValue.lastName);
-    window.localStorage.setItem("subject", getValue.subject);
-    window.localStorage.setItem("email", getValue.email);
-  });
+  const context = useContext(AppContext);
+
   function handleChange(evt: any) {
     const { value } = evt.target;
     setValue({
@@ -81,6 +78,13 @@ export default function Home() {
       [evt.target.name]: value,
     });
   }
+
+  useEffect(function () {
+    window.localStorage.setItem("firstName", getValue.firstName);
+    window.localStorage.setItem("lastName", getValue.lastName);
+    window.localStorage.setItem("subject", getValue.subject);
+    window.localStorage.setItem("email", getValue.email);
+  });
 
   return (
     <div className={styles.container}>
@@ -140,19 +144,24 @@ export default function Home() {
               placeholder="Query Subject"
               onChange={handleChange}
             />{" "}
-            <br /> <br />
-            {/* <Link href="/upload">Get Help</Link> */}
-            <button type="submit">Get Help</button>
+            <br />
+            <button
+              type="submit"
+              onClick={() => {
+                context.setInput(getValue);
+              }}
+            >
+              Get Help
+            </button>
           </form>
         </div>
+        {/* -----------------------Benifits----------------------- */}
         <section className={styles.whiteBackground}>
-          {/* -----------------------Benifits----------------------- */}
           <FadeInWhenVisible>
             <div className={styles.Benifits}>
               <div
                 className={styles.benifitsImg}
                 style={{
-                  // backgroundImage: `url('/resources/girlVector.png')`,
                   backgroundImage: `url('/resources/young-student-girl-isolated-gray-wall-smiling-camera-pressing-laptop-chest-wearing-backpack-ready-go-studies-start-new-project-suggest-new-ideas-removebg-preview.png')`,
                 }}
               >
