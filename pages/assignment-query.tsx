@@ -1,32 +1,101 @@
+import { findSourceMap } from "module";
 import Head from "next/head";
-import { useState } from "react";
+import { useRouter } from "next/router";
+import { useContext, useEffect, useState } from "react";
+import AppContext from "../components/AppContext";
 import HeaderOtherPages from "../components/HeaderOtherPages";
 import HeadImage from "../public/resources/questions-answers.jpg";
 import styles from "../styles/AssignmentQuery.module.css";
 import homestyles from "../styles/Home.module.css";
 
 export default function AssignmentQuery() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [contact, setContact] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [words, setWords] = useState("");
-  const [deadline, setDeadline] = useState("");
+  // interface FormData {
+  //   firstName: string;
+  //   lastName: string;
+  //   email: string;
+  //   contact: string;
+  //   subject: string;
+  //   title: string;
+  //   description: string;
+  //   words: string;
+  //   deadline: string;
+  //   file: string;
+  // }
 
-  // const formInitial = useState({
-  //   firstName: "",
-  //   lastName: "",
-  //   email: "",
-  //   subject: "",
-  //   contact: "",
-  //   title: "",
-  //   description: "",
-  //   words: "",
-  //   deadline: "",
-  // });
+  // useEffect(function () {
+  //   // JSON.parse(window.localStorage.getItem)
+  //   if (window.localStorage.getItem("firsName") == "Mohit") {
+  //     console.log("Empty");
+  //   } else {
+  //     console.log(window.localStorage);
+  //   }
+
+  //   const localFirstName: string =
+  //     window.localStorage.getItem("firstName") || "";
+  //   const localLastName: string = window.localStorage.getItem("lastName") || "";
+  //   const localsubject: string = window.localStorage.getItem("subject") || "";
+  //   const localemail: string = window.localStorage.getItem("email") || "";
+  //   setValue({
+  //     firstName: localFirstName,
+  //     lastName: localLastName,
+  //     subject: localsubject,
+  //     email: localemail,
+  //   });
+  // }, []);
+
+  const context = useContext(AppContext);
+  const formInitialValue = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    contact: "",
+    subject: "",
+    title: "",
+    description: "",
+    words: "",
+    deadline: "",
+    file: null,
+  };
+
+  const [getValue, setValue] = useState({
+    ...formInitialValue,
+    // firstName: context.input.firstName,
+    // lastName: context.input.lastName,
+    // email: context.input.email,
+    // subject: context.input.subject,
+  });
+
+  // console.log(context.input);
+
+  function handleChange(evt: any) {
+    const { value } = evt.target;
+
+    setValue({
+      ...getValue,
+      [evt.target.name]: evt.target.name === "file" ? evt.target.files : value,
+    });
+  }
+
+  // const [uploadStatus, setUploadStatus] = useState(UploadStatus.none);
+
+  // function handleSubmit(e: FormEvent) {
+  //   e.preventDefault();
+  //   uploadAssignment(getValue)
+  //     .then(() => {
+  //       setUploadStatus(UploadStatus.success);
+  //       setTimeout(() => {
+  //         setUploadStatus(UploadStatus.none);
+  //       }, 5000);
+  //       setValue(formInitialValue);
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //       setUploadStatus(UploadStatus.failed);
+  //       setTimeout(() => {
+  //         setUploadStatus(UploadStatus.none);
+  //       }, 5000);
+  //     });
+  // }
   return (
     <>
       <Head>
@@ -46,10 +115,11 @@ export default function AssignmentQuery() {
                 <label htmlFor="fistname">Firstname</label> <br />
                 <input
                   type="text"
-                  name="firstname"
-                  value={firstName}
+                  name="firstName"
+                  value={getValue.firstName}
                   placeholder="Your Firstname"
-                  onChange={(e) => setFirstName(e.target.value)}
+                  // onChange={(e) => setFirstName(e.target.value)}
+                  onChange={handleChange}
                 />{" "}
                 <br />
               </div>
@@ -57,10 +127,11 @@ export default function AssignmentQuery() {
                 <label htmlFor="lastname">Lastname</label> <br />
                 <input
                   type="text"
-                  name="lastname"
-                  value={lastName}
+                  name="lastName"
+                  value={getValue.lastName}
                   placeholder="Your Lastname"
-                  onChange={(e) => setLastName(e.target.value)}
+                  // onChange={(e) => setLastName(e.target.value)}
+                  onChange={handleChange}
                 />{" "}
                 <br />
               </div>
@@ -69,9 +140,10 @@ export default function AssignmentQuery() {
                 <input
                   type="text"
                   name="email"
-                  value={email}
+                  value={getValue.email}
                   placeholder="Your Email"
-                  onChange={(e) => setEmail(e.target.value)}
+                  // onChange={(e) => setEmail(e.target.value)}
+                  onChange={handleChange}
                 />{" "}
                 <br />
               </div>
@@ -80,9 +152,10 @@ export default function AssignmentQuery() {
                 <input
                   type="tel"
                   name="contact"
-                  value={contact}
+                  value={getValue.contact}
                   placeholder="Your Contact Number"
-                  onChange={(e) => setContact(e.target.value)}
+                  // onChange={(e) => setContact(e.target.value)}
+                  onChange={handleChange}
                 />{" "}
                 <br />
               </div>
@@ -94,9 +167,10 @@ export default function AssignmentQuery() {
                 <input
                   type="text"
                   name="subject"
-                  value={subject}
+                  value={getValue.subject}
                   placeholder="Query Subject"
-                  onChange={(e) => setSubject(e.target.value)}
+                  // onChange={(e) => setSubject(e.target.value)}
+                  onChange={handleChange}
                 />{" "}
                 <br />
               </div>
@@ -105,9 +179,10 @@ export default function AssignmentQuery() {
                 <input
                   type="text"
                   name="title"
-                  value={title}
+                  value={getValue.title}
                   placeholder="Title"
-                  onChange={(e) => setTitle(e.target.value)}
+                  // onChange={(e) => setTitle(e.target.value)}
+                  onChange={handleChange}
                 />{" "}
                 <br />
               </div>
@@ -116,9 +191,9 @@ export default function AssignmentQuery() {
                 <input
                   type="text"
                   name="description"
-                  value={description}
+                  value={getValue.description}
                   placeholder="Description"
-                  onChange={(e) => setDescription(e.target.value)}
+                  onChange={handleChange}
                 />{" "}
                 <br />
               </div>{" "}
@@ -127,9 +202,10 @@ export default function AssignmentQuery() {
                 <input
                   type="number"
                   name="words"
-                  value={words}
+                  value={getValue.words}
                   placeholder="Words"
-                  onChange={(e) => setWords(e.target.value)}
+                  // onChange={(e) => setWords(e.target.value)}
+                  onChange={handleChange}
                 />{" "}
                 <br />
               </div>
@@ -138,9 +214,21 @@ export default function AssignmentQuery() {
                 <input
                   type="date"
                   name="deadline"
-                  value={deadline}
+                  value={getValue.deadline}
                   placeholder="Deadline"
-                  onChange={(e) => setDeadline(e.target.value)}
+                  // onChange={(e) => setDeadline(e.target.value)}
+                  onChange={handleChange}
+                />{" "}
+                <br />
+              </div>
+              <div className="fileUploadSection">
+                <label htmlFor="upload">Upload File</label> <br />
+                <input
+                  type="file"
+                  name="fileupload"
+                  // value={deadline}
+                  placeholder="Upload Your File"
+                  // onChange={(e) => setDeadline(e.target.value)}
                 />{" "}
                 <br />
               </div>
