@@ -20,7 +20,8 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/index.jsx",
-    "pages/blogs/[id].js"
+    "pages/blogs/[id].js",
+    "pages/api/page_views.js"
   ],
   "exclude": ["node_modules"]
 }

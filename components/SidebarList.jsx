@@ -55,7 +55,6 @@ export default function SidebarList() {
         {getBlogs.map((blog) => (
           <a key={blog.id} href={`/blogs/${blog.id}`}>
             {/* <Image width={200} height={200} src={blog.thumbnail} alt="" /> */}
-            {console.log(blog)}
             <p>{blog.title}</p>
           </a>
         ))}

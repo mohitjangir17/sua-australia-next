@@ -43,25 +43,25 @@ function Footer() {
       <div className={styles.footerColumns}>
         <h3>Help Desk</h3>
         <div className={styles.exploreLinks}>
-          <Link href="#">
+          <Link href="/assignment-query">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
             Assignment Expert
           </Link>
-          <Link href="#">
+          <Link href="https://app.swipeupassignments.com/auth/signin">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
             Login
           </Link>
-          <Link href="#">
+          <Link href="https://app.swipeupassignments.com/auth/signup">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
             Sign Up
           </Link>
-          <Link href="#">
+          <Link href="/contact">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
