@@ -5,6 +5,20 @@
   justify-content: space-between;
 }
 
+.logoSectionScrolled {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+  padding: 0em 1em;
+  background-color: white;
+  justify-content: space-between;
+  transition: all .3s ease-out;
+  opacity: 0;
+
+}
+
 .headerBar>a {
   height: 70px;
 }
@@ -191,6 +205,10 @@
 
   }
 
+  .logoSectionScrolled {
+    padding: 0 .5em;
+  }
+
   .desktopNavbar {
     display: flex;
   }
@@ -218,10 +236,18 @@
   .LogoSection {
     padding: 0 5em;
   }
+
+  .logoSectionScrolled {
+    padding: 0 5em;
+  }
 }
 
 @media only screen and (min-width: 1300px) {
   .LogoSection {
+    padding: 0 11em;
+  }
+
+  .logoSectionScrolled {
     padding: 0 11em;
   }
 }
