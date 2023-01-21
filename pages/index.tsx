@@ -37,6 +37,7 @@ import HeaderText from "../components/HeaderText";
 import FadeInWhenVisible from "../components/Fiwv";
 import clientReviewsData from "../clientReviewsData/data";
 import AppContext from "../components/AppContext";
+import Script from "next/script";
 
 // Testimonials Slider
 const responsive = {
@@ -555,7 +556,13 @@ export default function Home() {
               </div>
             </FadeInWhenVisible>
           </div>
-
+          <Script id="popup">
+            {` function Popup() {
+                console.log("Hello");
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+  }`}
+          </Script>
           {/* -----------------------Testmonials---------------------- */}
           <div className={styles.Testimonials}>
             <span className={styles.spanTestimonials}>Testimonials</span>
@@ -567,11 +574,16 @@ export default function Home() {
                 infinite={true}
                 transitionDuration={500}
                 removeArrowOnDeviceType={["tablet", "mobile"]}
-                autoPlay={true}
+                autoPlay={false}
                 autoPlaySpeed={3000}
               >
                 {clientReviewsData.map((review) => (
-                  <div key={review.id} className={styles.testimonials_list}>
+                  <div
+                    key={review.id}
+                    className={styles.testimonials_list}
+                    id="individualComment"
+                    // onClick={Popup}
+                  >
                     <div>
                       {/* <img src={reactlogo} alt="person" /> */}
                       <span>

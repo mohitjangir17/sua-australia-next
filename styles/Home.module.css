@@ -132,8 +132,8 @@
 /* -----------------Upload Form---------------- */
 .goodGrades {
   color: #b78456;
-  font-size: 3rem;
-  max-width: 400px;
+  font-size: 2.1em;
+  /* max-width: 400px; */
 }
 
 .goodGradesP {
@@ -169,7 +169,7 @@
 .UploadForm input {
   width: 100%;
   padding: 12px 0;
-  font-size: larger;
+  font-size: large;
   border: none;
   border-bottom: #b78456 solid 2px;
 }
@@ -204,7 +204,7 @@
 }
 
 .UploadForm label {
-  padding: 12px 12px 12px 0;
+  padding: 12px 12px 0px 0;
   display: inline-block;
   color: #b78456;
   font-weight: 500;
@@ -311,7 +311,7 @@
 .Courses h4 {
   display: inline-block;
   width: 235px;
-  height: 40px;
+  margin-bottom: -2em;
 }
 
 .courseItemContainer {
@@ -333,7 +333,8 @@
 }
 
 .courseItem img {
-  width: 80%;
+  /* width: auto; */
+  width: 70%;
   height: 70%;
 }
 
@@ -473,7 +474,7 @@ section.courseItemContainer:focus {
 .Testimonials {
   background-color: white;
   padding: 4em 0;
-  text-align: left;
+  text-align: center;
 }
 
 .spanTestimonials {
@@ -507,7 +508,7 @@ section.courseItemContainer:focus {
 }
 
 .testimonials_list div {
-  display: flex;
+  /* display: flex; */
   padding: 1em;
 }
 
@@ -642,10 +643,9 @@ section.courseItemContainer:focus {
   }
 
   .Herotext>h1 {
-    font-weight: 800;
-
+    font-weight: 700;
     /* font-size: 3.2em; */
-    line-height: 1.2;
+    line-height: 1.1;
     margin-bottom: 1em;
     width: 50%;
   }
@@ -672,7 +672,6 @@ section.courseItemContainer:focus {
     position: absolute;
     top: 8.5em;
     right: 1em;
-
     width: 45vw;
     padding: 0;
     margin: 0;
@@ -745,7 +744,7 @@ section.courseItemContainer:focus {
 
   .Herotext>h1 {
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.1;
     margin-bottom: 1em;
     width: 45%;
   }
@@ -912,7 +911,6 @@ section.courseItemContainer:focus {
   .UploadForm {
     top: 9em;
     right: 12em;
-
     width: 27vw;
     padding: 0;
     margin: 0;
@@ -927,6 +925,11 @@ section.courseItemContainer:focus {
     background-color: white;
     border-radius: 10px;
     box-shadow: 2px 2px 15px grey;
+  }
+
+  /* --------------Courses-------------------------- */
+  .courseItemContainer {
+    grid-template-columns: auto auto auto;
   }
 
   /* -------------Figures------------------------ */

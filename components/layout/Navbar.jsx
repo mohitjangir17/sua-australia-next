@@ -89,7 +89,7 @@ function Navbar() {
               document.getElementById("logoSectionScrolled").style.opacity = "1";
               document.getElementById("logoSectionScrolled").style.transform = "translate(0%, 0%)";
             } else {
-              // document.getElementById("logoSectionScrolled").style.opacity = "0";
+              document.getElementById("logoSectionScrolled").style.opacity = "0";
               document.getElementById("logoSectionScrolled").style.transform = "translate(0%, -100%)";
             }
           });
