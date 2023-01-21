@@ -311,6 +311,7 @@
 .Courses h4 {
   display: inline-block;
   width: 235px;
+  margin-bottom: -2em;
 }
 
 .courseItemContainer {
