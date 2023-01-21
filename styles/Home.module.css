@@ -311,7 +311,6 @@
 .Courses h4 {
   display: inline-block;
   width: 235px;
-  height: 40px;
 }
 
 .courseItemContainer {
@@ -929,7 +928,7 @@ section.courseItemContainer:focus {
 
   /* --------------Courses-------------------------- */
   .courseItemContainer {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
   }
 
   /* -------------Figures------------------------ */
