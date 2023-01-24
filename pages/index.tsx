@@ -249,7 +249,7 @@ export default function Home() {
                 <div className={styles.FeatureList}>
                   <Image src={feature1} alt="" />
                   <div>
-                    <h3>Plagarism Free</h3>
+                    <h3>Plagiarism Free</h3>
                     <p>
                       A 100% original solution to reduce the risk of negative
                       marking.
@@ -379,8 +379,8 @@ export default function Home() {
                 >
                   <div className={styles.courseItem}>
                     <Image
-                      width={1920}
-                      height={1920}
+                      width={600}
+                      height={600}
                       src={assignment_help}
                       alt="course"
                     />
@@ -400,8 +400,8 @@ export default function Home() {
                 >
                   <div className={styles.courseItem}>
                     <Image
-                      width={1920}
-                      height={1920}
+                      width={600}
+                      height={600}
                       src={dissertation_help}
                       alt="course"
                     />
@@ -420,8 +420,8 @@ export default function Home() {
                 >
                   <div className={styles.courseItem}>
                     <Image
-                      width={1920}
-                      height={1920}
+                      width={600}
+                      height={600}
                       src={essay_help}
                       alt="course"
                     />
@@ -440,8 +440,8 @@ export default function Home() {
                 >
                   <div className={styles.courseItem}>
                     <Image
-                      width={1920}
-                      height={1920}
+                      width={600}
+                      height={600}
                       src={exam_help}
                       alt="course"
                     />
@@ -460,8 +460,8 @@ export default function Home() {
                 >
                   <div className={styles.courseItem}>
                     <Image
-                      width={1920}
-                      height={1920}
+                      width={600}
+                      height={600}
                       src={programming_help}
                       alt="course"
                     />
@@ -481,8 +481,8 @@ export default function Home() {
                 >
                   <div className={styles.courseItem}>
                     <Image
-                      width={1920}
-                      height={1920}
+                      width={600}
+                      height={600}
                       src={thesis_help}
                       alt="course"
                     />
