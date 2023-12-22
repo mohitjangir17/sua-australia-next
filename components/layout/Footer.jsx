@@ -23,7 +23,7 @@ function Footer() {
         </Link>
         {/* <h3>About</h3> */}
         <p>
-          SwipeUp utilizes the expertise of its team to offer quality services
+          EasyLekh utilizes the expertise of its team to offer quality services
           to its clients. Our key motive is to provide such Help that the
           student achieves the best in class results.
         </p>
@@ -168,11 +168,11 @@ function Footer() {
             </span>
             +91 935-158-3366
           </a>
-          <a href="mailto: support@swipeupassignments.com">
+          <a href="mailto: easylekh@gmail.com">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            support@swipeupassignments.com
+            easylekh@gmail.com
           </a>
         </div>
       </div>

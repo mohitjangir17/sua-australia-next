@@ -32,14 +32,14 @@ export default function Contact() {
               </p>
               <p>
                 <strong> Email: </strong>{" "}
-                <a href="mailto: support@swipeupassignments.com">
-                  support@swipeupassignments.com
+                <a href="mailto: easylekh@gmail.com">
+                  easylekh@gmail.com
                 </a>
               </p>
               <p>
                 <strong> Website: </strong>{" "}
-                <a href="https://swipeupassignments.com">
-                  swipeupassignments.com
+                <a href="https://easylekh.com">
+                  easylekh.com
                 </a>{" "}
               </p>
             </div>

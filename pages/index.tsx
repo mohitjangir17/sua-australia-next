@@ -227,7 +227,7 @@ export default function Home() {
                     <p>
                       Our academic proofreaders team understands the importance
                       of 100% error-free writing, which helps make
-                      SwipeupAssignments.com the best service. Our experts
+                      Easylekh.com the best service. Our experts
                       proofread your content and make any necessary corrections
                       before submitting it. Each work is edited and proofread
                       multiple times to ensure quality and error-free work.

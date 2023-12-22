@@ -12,7 +12,7 @@ export default function HeaderText() {
         ease: [0, 0.71, 0.2, 1.01],
       }}
     >
-      <p className={styles.textSpan}>Welcome to Swipeup Assignments!</p>
+      <p className={styles.textSpan}>Welcome to EasyLekh!</p>
       <h1 className={styles.heroHeading}>
         The Platform Where You get Premium Assignment Writing Help by Experts
       </h1>

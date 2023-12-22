@@ -18,7 +18,7 @@ function Navbar() {
           <Link href="/">
             <Image
               src="/resources/logo512.png"
-              width={150}
+              width={200}
               height={150}
               alt="logo"
             />
