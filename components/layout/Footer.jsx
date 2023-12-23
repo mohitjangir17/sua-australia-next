@@ -160,13 +160,20 @@ function Footer() {
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            Jaipur, Rajasthan, India
+            Praveen Kumar Jangir
           </p>
-          <a href="tel:+91 6375353565">
+          <p>
+            {" "}
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            +91 637-535-3565
+            Jaipur, Rajasthan, India
+          </p>
+          <a href="tel:+91 9672378728">
+            <span>
+              <Image width={25} src={arrow} alt="" />
+            </span>
+            +91 967-237-8728
           </a>
           <a href="mailto: easylekh@gmail.com">
             <span>

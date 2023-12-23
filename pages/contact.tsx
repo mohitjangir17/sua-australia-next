@@ -24,11 +24,14 @@ export default function Contact() {
             </p>
             <div>
               <p>
+                <strong> Person:</strong> Praveen Kumar Jangir
+              </p>
+              <p>
                 <strong> Address:</strong> Jaipur, Rajasthan
               </p>
               <p>
                 <strong> Phone:</strong>{" "}
-                <a href="tel:+91 93515 83366">+91 93515 83366</a>
+                <a href="tel:+91 9672378728">+91 967-237-8728</a>
               </p>
               <p>
                 <strong> Email: </strong>{" "}
