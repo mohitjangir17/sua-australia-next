@@ -17,7 +17,7 @@ export default function Contact() {
       <main className={homestyles.mainContainer}>
         <div className={styles.contactContainer}>
           <section className={styles.contactLinks}>
-            <h3 className={styles.lgit}>Let's get in touch!</h3>
+            <h3 className={styles.lgit}>Get in touch with EasyLekh!</h3>
             <p>
               Whether you wish to seek help or to offer a suggestion, we are
               open to everything. So feel free to get in touch with us.
@@ -27,7 +27,7 @@ export default function Contact() {
                 <strong> Person:</strong> Praveen Kumar Jangir
               </p>
               <p>
-                <strong> Address:</strong> Jaipur, Rajasthan
+                <strong> Address:</strong> 5F-31 Mahima Trinity Mall, Swej Farm, Jaipur(302019)
               </p>
               <p>
                 <strong> Phone:</strong>{" "}

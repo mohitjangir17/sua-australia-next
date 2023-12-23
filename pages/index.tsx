@@ -601,13 +601,13 @@ export default function Home() {
           </div>
 
           {/* ----------------Blogs Component---------------- */}
-          <FadeInWhenVisible>
+          {/* <FadeInWhenVisible>
             <div className={styles.Blogs}>
               <span className={styles.spanBlogs}>Blogs</span>
               <h2>Our Latest Blogs</h2>
               <Blogs />
             </div>
-          </FadeInWhenVisible>
+          </FadeInWhenVisible> */}
         </section>
       </div>
     </div>
