@@ -49,18 +49,18 @@ function Footer() {
             </span>
             Assignment Expert
           </Link>
-          <Link href="https://app.swipeupassignments.com/auth/signin">
+          {/* <Link href="https://app.swipeupassignments.com/auth/signin">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
             Login
-          </Link>
-          <Link href="https://app.swipeupassignments.com/auth/signup">
+          </Link> */}
+          {/* <Link href="https://app.swipeupassignments.com/auth/signup">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
             Sign Up
-          </Link>
+          </Link> */}
           <Link href="/contact">
             <span>
               <Image width={25} src={arrow} alt="" />
@@ -162,11 +162,11 @@ function Footer() {
             </span>
             Jaipur, Rajasthan, India
           </p>
-          <a href="tel:+91 93515 83366">
+          <a href="tel:+91 6375353565">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            +91 935-158-3366
+            +91 637-535-3565
           </a>
           <a href="mailto: easylekh@gmail.com">
             <span>
