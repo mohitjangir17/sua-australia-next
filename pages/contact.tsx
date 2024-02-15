@@ -17,7 +17,7 @@ export default function Contact() {
       <main className={homestyles.mainContainer}>
         <div className={styles.contactContainer}>
           <section className={styles.contactLinks}>
-            <h3 className={styles.lgit}>Get in touch with EasyLekh!</h3>
+            <h3 className={styles.lgit}>Get in touch with EasyLekhx!</h3>
             <p>
               Whether you wish to seek help or to offer a suggestion, we are
               open to everything. So feel free to get in touch with us.
@@ -31,7 +31,7 @@ export default function Contact() {
               </p>
               <p>
                 <strong> Phone:</strong>{" "}
-                <a href="tel:+91 9672378728">+91 967-237-8728</a>
+                <a href="tel:+91 9672378728">+91 9672378728</a>
               </p>
               <p>
                 <strong> Email: </strong>{" "}

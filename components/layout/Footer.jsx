@@ -12,7 +12,7 @@ function Footer() {
   return (
     <div className={styles.Footer}>
       <div className={styles.footerColumns}>
-        <Link href="/sua">
+        <Link href="/">
           <Image
             className={styles.footerLogo}
             src="/resources/logo512.png"
@@ -67,17 +67,23 @@ function Footer() {
             </span>
             Contact Us
           </Link>
-          <Link href="#">
+          <Link href="/refund-policies">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
             Refund Policy
           </Link>
-          <Link href="#">
+          <Link href="/privacy-policy">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
             Privacy Policy
+          </Link>
+          <Link href="/terms&conditions">
+            <span>
+              <Image width={25} src={arrow} alt="" />
+            </span>
+            Terms & Conditions
           </Link>
         </div>
       </div>
@@ -167,13 +173,14 @@ function Footer() {
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            Jaipur, Rajasthan, India
+            5F-31 Mahima Trinity Mall, Sodala
+            Jaipur, Rajasthan, India (302019)
           </p>
-          <a href="tel:+91 9672378728">
+          <a href="tel:9672378728">
             <span>
               <Image width={25} src={arrow} alt="" />
             </span>
-            +91 967-237-8728
+            +91-9672378728
           </a>
           <a href="mailto: easylekh@gmail.com">
             <span>

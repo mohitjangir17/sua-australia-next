@@ -564,7 +564,7 @@ export default function Home() {
   }`}
           </Script>
           {/* -----------------------Testmonials---------------------- */}
-          <div className={styles.Testimonials}>
+     {/*      <div className={styles.Testimonials}>
             <span className={styles.spanTestimonials}>Testimonials</span>
             <h2>What our clients say?</h2>
             <div className="testimonials_container">
@@ -585,7 +585,7 @@ export default function Home() {
                     // onClick={Popup}
                   >
                     <div>
-                      {/* <img src={reactlogo} alt="person" /> */}
+                      <img src={reactlogo} alt="person" />
                       <span>
                         <h3> {review.reviewerName}</h3>
                         <p>{review.courseName}</p>
@@ -598,7 +598,7 @@ export default function Home() {
                 ))}
               </Carousel>
             </div>
-          </div>
+          </div> */}
 
           {/* ----------------Blogs Component---------------- */}
           {/* <FadeInWhenVisible>
